@@ -1,0 +1,175 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import "../fontello/css/fontello";
+@import "../fontello/css/animation";
+
+::selection {
+    background-color: $primary-color;
+    color: #fff;
+}
+
+.alert, .breadcrumb {
+    border: 2px solid #888;
+    border-radius: 0;
+}
+
+html {
+    min-height: 100%; // For stickyfooter
+    position: relative; // For stickyfooter
+}
+
+body {
+    background-color: white;
+    font-size: 16px;
+    margin: 0 0 100px; // bottom = footer height + 40px (extra margin)
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    border-top: 4px solid $primary-color;
+    border-bottom: 4px solid gray;
+
+    & .menu {
+        border-bottom: 2px solid gray;
+        display: flex;
+
+        & .navigation {
+            margin-left: 0;
+            margin-right: 0;
+            order: 1;
+
+            & .buttons {
+                display: inline-block;
+                height: 40px;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+
+                & li {
+                    display: inline-block;
+
+                    & a {
+                        color: #5d5d5e;
+                        display: inline-block;
+                        font-size: 12px;
+                        font-weight: 600;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 10px;
+                        text-decoration: none;
+                    }
+
+                    & a:hover {
+                        background-color: #E4E2E2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+header {
+    & > .logo {
+        opacity: .75;
+        position: absolute;
+        left: 8px;
+        top: 54px;
+        transition: opacity 0.4s ease
+    }
+    & > .logo:hover {
+        opacity: 1;
+    }
+
+    & > .hero {
+        background-color: $primary-color;
+        background-image: url('/images/hollywood_sign.jpg');
+        background-position: center center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        text-align: center;
+
+        & h1 {
+            background-color: $primary-color;
+            color: white;
+            display: inline-block;
+            font-size: 46px;
+            font-weight: bold;
+            margin: 0;
+            padding: 0px 20px;
+        }
+
+        & h1::selection {
+            background-color: #1a898a;
+        }
+    }
+}
+
+
+
+footer {
+    background-color: #101c3d;
+    background-image: url('/images/dark-paths.png');
+    bottom: 0;
+    color: #888;
+    font-size: 14px;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    & > .container {
+        margin: 20px auto 0 auto;
+
+        a {
+            color: #e5e5e5;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+
+
+.hover-up {
+    position: relative;
+    &:hover {
+        top: -1px;
+    }
+}
+
+
+
+
+/* Tablet, Landscape */
+@media screen and (max-width: 1224px) {}
+/* Mobile, Landscape */
+@media screen and (max-width: 720px) {
+
+    header > .hero {
+        height: 120px;
+
+        & > h1 {
+            font-size: 24px;
+        }
+    }
+}
+
+/* Mobile, Portrait */
+@media screen and (max-width: 480px) {}
