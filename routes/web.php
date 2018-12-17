@@ -17,13 +17,13 @@ Route::pattern('tld', '(io|development)');
 // Main "App" routes:
 Route::group(['domain' => 'nicholas-morgan.{tld}'], function() {
     Route::get('/', 'HomepageController@showHomepage');
-    Route::get('login', 'AuthController@showLoginPage');
-    Route::post('login', 'AuthController@login');
-    Route::get('posts', 'PostsController@showAllPosts');
-    Route::get('posts/{identifier}', 'PostsController@showPost');
-    Route::get('logout', 'AuthController@logout');
-    Route::get('contra', 'ContraController@play');
-
+//    Route::get('login', 'AuthController@showLoginPage');
+//    Route::post('login', 'AuthController@login');
+//    Route::get('posts', 'PostsController@showAllPosts');
+//    Route::get('posts/{identifier}', 'PostsController@showPost');
+//    Route::get('logout', 'AuthController@logout');
+//    Route::get('contra', 'ContraController@play');
+//
 //    Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
 //        Route::get('/', 'Admin\HomepageController@showHomepage');
 //        Route::post('settings', 'Admin\HomepageController@saveGlobalSettings');
