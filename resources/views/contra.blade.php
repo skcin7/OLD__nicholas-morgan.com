@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Play Contra!</title>
+    <title>Destroy the Vile Red Falcon!</title>
 
     <link href="{{ url('css/nes.css?random=' . rand(1,99999)) }}" rel="stylesheet" type="text/css">
 </head>
@@ -83,7 +83,7 @@
                 <p class="mb-0 text-muted">Thanks and credit to <a href="https://github.com/bfirsh/jsnes" target="_blank">JSNES</a> for the emulator!</p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" type="button" data-dismiss="modal">Okay</button>
+                <button class="btn btn-primary" type="button" data-dismiss="modal">Got It</button>
             </div>
         </div>
     </div>

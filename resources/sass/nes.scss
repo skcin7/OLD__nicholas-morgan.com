@@ -83,7 +83,6 @@ body {
 
     .modal-content {
         border: 2px solid $primary-color;
-        border-radius: 2px;
         box-shadow: none;
 
         .modal-header {
@@ -92,6 +91,12 @@ body {
 
             .modal-title {
                 font-weight: bold;
+            }
+        }
+
+        .modal-footer {
+            button {
+                border-radius: 0 !important;
             }
         }
     }

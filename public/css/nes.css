@@ -10657,7 +10657,6 @@ body > div#container #nes-canvas {
 
 .modal-dialog .modal-content {
   border: 2px solid #FD7F05;
-  border-radius: 2px;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -10670,6 +10669,10 @@ body > div#container #nes-canvas {
 
 .modal-dialog .modal-content .modal-header .modal-title {
   font-weight: bold;
+}
+
+.modal-dialog .modal-content .modal-footer button {
+  border-radius: 0 !important;
 }
 
 .table-nonfluid {

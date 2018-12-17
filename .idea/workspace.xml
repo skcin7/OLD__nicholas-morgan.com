@@ -55,19 +55,19 @@
           <entry key="js" value="905" />
           <entry key="json" value="11" />
           <entry key="md" value="61" />
-          <entry key="php" value="8344" />
-          <entry key="scss" value="1916" />
+          <entry key="php" value="8397" />
+          <entry key="scss" value="1977" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="4356" />
+          <entry key="Blade" value="4409" />
           <entry key="JSON" value="11" />
           <entry key="JavaScript" value="905" />
           <entry key="Markdown" value="61" />
           <entry key="PHP" value="3988" />
           <entry key="PLAIN_TEXT" value="110" />
-          <entry key="SCSS" value="1916" />
+          <entry key="SCSS" value="1977" />
         </counts>
       </usages-collector>
     </session>
@@ -83,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/contra.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+            <state relative-caret-position="240">
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -119,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/sass/nes.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+            <state relative-caret-position="213">
+              <caret line="89" column="42" lean-forward="true" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -248,8 +248,8 @@
         <option value="$PROJECT_DIR$/resources/sass/_variables.scss" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
         <option value="$PROJECT_DIR$/public/nes/nes-embed.js" />
-        <option value="$PROJECT_DIR$/resources/views/contra.blade.php" />
         <option value="$PROJECT_DIR$/resources/sass/nes.scss" />
+        <option value="$PROJECT_DIR$/resources/views/contra.blade.php" />
       </list>
     </option>
   </component>
@@ -620,12 +620,12 @@
       <workItem from="1544565114815" duration="5988000" />
       <workItem from="1544711839563" duration="1443000" />
       <workItem from="1544949614508" duration="533000" />
-      <workItem from="1544985560425" duration="29235000" />
+      <workItem from="1544985560425" duration="29550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37199000" />
+    <option name="totallyTimeSpent" value="37514000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="72" y="-1034" width="1440" height="804" extended-state="0" />
@@ -1040,17 +1040,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/contra.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/sass/nes.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        <state relative-caret-position="213">
+          <caret line="89" column="42" lean-forward="true" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/nes.scss">
+    <entry file="file://$PROJECT_DIR$/resources/views/contra.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        <state relative-caret-position="240">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
         </state>
       </provider>
     </entry>
