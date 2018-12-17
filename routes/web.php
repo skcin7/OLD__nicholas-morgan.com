@@ -16,7 +16,7 @@ Route::pattern('tld', '(io|development)');
 
 // Main "App" routes:
 Route::group(['domain' => 'nicholas-morgan.{tld}'], function() {
-    Route::get('/', 'HomepageController@showHomepage');
+//    Route::get('/', 'HomepageController@showHomepage');
 //    Route::get('login', 'AuthController@showLoginPage');
 //    Route::post('login', 'AuthController@login');
 //    Route::get('posts', 'PostsController@showAllPosts');
