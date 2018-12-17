@@ -117,6 +117,11 @@ window.App = {};
         $('.autosize').autosize();
 
         // Mousetrap events:
+        // konami code!
+        mousetrap.bind('a d m i n enter', function() {
+            window.location = app.url('admin');
+        });
+
         var scale = 1;
         mousetrap.bind('m i r r o r enter', function() {
             scale *= -1;
