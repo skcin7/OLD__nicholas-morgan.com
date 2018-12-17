@@ -45,7 +45,7 @@
             <a class="menu-item" href="{{ url('posts') }}">Posts</a>
         @endif
         @if(Auth::check())
-            <a class="menu-item ml-auto" href="{{ url('admin') }}">{{ Auth::check() ? Auth::user()->name : 'Admin' }}</a>
+            <a class="menu-item ml-auto" href="{{ url('admin') }}">Admin</a>
         @endif
     </div>
 
