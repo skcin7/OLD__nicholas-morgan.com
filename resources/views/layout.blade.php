@@ -40,7 +40,7 @@
     </div>
 
     <div id="menu">
-        <a class="menu-item" href="{{ url('/') }}">Home</a>
+        <a class="menu-item" href="{{ url('/') }}">About</a>
         @if(isset($settings->show_posts) && $settings->show_posts)
             <a class="menu-item" href="{{ url('posts') }}">Posts</a>
         @endif
