@@ -14,7 +14,7 @@
     <a class="menu-item mr-auto" href="{{ url('/') }}">‹ Back</a>
     <a class="menu-item" href="#" data-toggle="modal" data-target="#modal-controls">Controls</a>
 </header>
-<div class="container">
+<div class="container" id="container">
     <canvas id="nes-canvas" width="256" height="240" />
 </div>
 

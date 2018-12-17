@@ -32,29 +32,48 @@ html {
     position: relative;
 }
 
-header#menu {
-    border-bottom: 2px solid #ddd;
-    border-top: 4px solid $primary-color;
+body {
     display: flex;
-    padding: 10px;
+    flex-direction: column;
 
-    .menu-item {
-        border: 2px solid #fff;
-        color: #fff;
-        display: inline-block;
-        font-family: $font-family-monospace;
-        font-weight: 600;
-        line-height: 40px;
-        margin: 0;
-        padding: 0 10px;
-        text-decoration: none;
+    > header#menu {
+        border-bottom: 2px solid #ddd;
+        border-top: 4px solid $primary-color;
+        display: flex;
+        height: 70px;
+        padding: 10px;
 
-        &:hover {
-            background-color: #fff;
-            color: #000;
+        .menu-item {
+            border: 2px solid #fff;
+            color: #fff;
+            display: inline-block;
+            font-family: $font-family-monospace;
+            font-weight: 600;
+            line-height: 40px;
+            height: 44px;
+            margin: 0;
+            padding: 0 10px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+
+    > div#container {
+        flex: 1;
+        text-align: center;
+
+        #nes-canvas {
+            border: 2px solid $primary-color;
+            width: 400px;
         }
     }
 }
+
+
 
 
 .modal-dialog {
@@ -80,8 +99,4 @@ header#menu {
 
 .table-nonfluid {
     width: auto !important;
-}
-
-#nes-canvas {
-    border: 2px solid $primary-color;
 }
