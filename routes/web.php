@@ -12,7 +12,7 @@
 */
 
 // Set pattern for TLD to be:
-Route::pattern('tld', '(io|development)');
+Route::pattern('tld', '(com|development)');
 
 // Main "App" routes:
 Route::group(['domain' => 'nicholas-morgan.{tld}'], function() {
