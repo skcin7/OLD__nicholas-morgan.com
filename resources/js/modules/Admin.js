@@ -6,7 +6,8 @@
 
             // Format Global Settings JSON:
             if($('#settings textarea').length === 1) {
-                var jsonStringified = JSON.stringify( JSON.parse($('#settings textarea').text()), undefined, "\t" );
+                var text = $('#settings textarea').text() || '';
+                var jsonStringified = JSON.stringify( JSON.parse(text), undefined, "\t" );
                 $('#settings textarea').html( jsonStringified );
                 $('.autosize').trigger('autosize.resize'); // Ensure textarea is grown vertically to fit all JSON code.
             }
