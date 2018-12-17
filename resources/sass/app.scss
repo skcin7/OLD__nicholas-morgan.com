@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,900');
 
 // Variables
 @import 'variables';
@@ -11,14 +11,25 @@
 @import "../fontello/css/fontello";
 @import "../fontello/css/animation";
 
+// Pages:
+@import "pages/Admin";
+@import "pages/Post";
+@import "pages/Posts";
+
 ::selection {
     background-color: $primary-color;
     color: #fff;
 }
 
 .alert, .breadcrumb {
-    border: 2px solid #888;
     border-radius: 0;
+}
+
+.hover-up {
+    position: relative;
+    &:hover {
+        top: -1px;
+    }
 }
 
 html {
@@ -27,73 +38,53 @@ html {
 }
 
 body {
-    background-color: white;
+    background-color: #fff;
     font-size: 16px;
     margin: 0 0 100px; // bottom = footer height + 40px (extra margin)
     padding: 0;
 }
 
 header {
-    background-color: white;
+    background-color: #fff;
     border-top: 4px solid $primary-color;
     border-bottom: 4px solid gray;
 
-    & .menu {
-        border-bottom: 2px solid gray;
-        display: flex;
-
-        & .navigation {
-            margin-left: 0;
-            margin-right: 0;
-            order: 1;
-
-            & .buttons {
-                display: inline-block;
-                height: 40px;
-                margin: 0;
-                padding: 0;
-                list-style-type: none;
-
-                & li {
-                    display: inline-block;
-
-                    & a {
-                        color: #5d5d5e;
-                        display: inline-block;
-                        font-size: 12px;
-                        font-weight: 600;
-                        height: 40px;
-                        line-height: 40px;
-                        padding: 0 10px;
-                        text-decoration: none;
-                    }
-
-                    & a:hover {
-                        background-color: #E4E2E2;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
-header {
-    & > .logo {
+    #logo {
         opacity: .75;
         position: absolute;
         left: 8px;
         top: 54px;
-        transition: opacity 0.4s ease
-    }
-    & > .logo:hover {
-        opacity: 1;
+        transition: opacity 0.4s ease;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
-    & > .hero {
-        background-color: $primary-color;
-        background-image: url('/images/hollywood_sign.jpg');
+    #menu {
+        border-bottom: 2px solid gray;
+        display: flex;
+
+        .menu-item {
+            color: #000;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            height: 40px;
+            line-height: 40px;
+            margin: 0;
+            padding: 0 10px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+    }
+
+    #hero {
+        background-color: #2c3429;
+        background-image: url('/images/hollywood.jpg');
         background-position: center center;
         background-size: cover;
         display: flex;
@@ -102,23 +93,17 @@ header {
         height: 200px;
         text-align: center;
 
-        & h1 {
+        h1 {
             background-color: $primary-color;
-            color: white;
+            color: #fff;
             display: inline-block;
             font-size: 46px;
-            font-weight: bold;
+            font-weight: 700;
             margin: 0;
             padding: 0px 20px;
         }
-
-        & h1::selection {
-            background-color: #1a898a;
-        }
     }
 }
-
-
 
 footer {
     background-color: #101c3d;
@@ -136,7 +121,7 @@ footer {
         margin: 20px auto 0 auto;
 
         a {
-            color: #e5e5e5;
+            color: #fff;
 
             &:hover {
                 color: $primary-color;
@@ -145,31 +130,37 @@ footer {
     }
 }
 
-
-
-.hover-up {
+.heading {
+    display: block;
+    font-size: 28px;
+    font-weight: 900;
+    margin: 2rem 0 2rem 0;
     position: relative;
-    &:hover {
-        top: -1px;
+
+    a {
+        font-size: initial;
+        font-weight: normal;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 }
 
 
 
 
-/* Tablet, Landscape */
-@media screen and (max-width: 1224px) {}
-/* Mobile, Landscape */
+
+// Mobile, Landscape:
 @media screen and (max-width: 720px) {
+    header {
+        #hero {
+            height: 120px;
 
-    header > .hero {
-        height: 120px;
-
-        & > h1 {
-            font-size: 24px;
+            h1 {
+                font-size: 24px;
+            }
         }
     }
 }
-
-/* Mobile, Portrait */
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 1224px) {} // Tablet, Landscape
+@media screen and (max-width: 480px) {} // Mobile, Portrait

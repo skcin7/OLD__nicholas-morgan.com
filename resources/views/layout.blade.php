@@ -26,7 +26,7 @@
     <meta name="msapplication-TileImage" content="{{ url('favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto+Slab' rel='stylesheet' type='text/css'>
+    {{--<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto+Slab' rel='stylesheet' type='text/css'>--}}
 
     <meta name="title" content="Nick Morgan">
     <meta name="author" content="Nick Morgan">
@@ -35,23 +35,19 @@
 </head>
 <body>
 <header>
-    <div class="logo" id="logo">
-        <a href="{{ url('/') }}"><img src="{{ url('images/logo-circle-invert.png') }}" width="50" /></a>
+    <div id="logo">
+        <a href="{{ url('/') }}"><img src="{{ url('images/logo-circle-invert.png') }}" width="50"></a>
     </div>
 
-    <div class="menu">
-        <div class="navigation">
-            <ul class="buttons">
-                <li><a href="{{ url('/') }}">Home</a></li>
-                {{--<li><a href="{{ url('technologies') }}">Technologies</a></li>--}}
-                {{--<li><a href="{{ url('posts') }}">Posts <span class="label label-info">{{ App\Post::where('is_active', true)->count() }}</span></a></li>--}}
-                {{--<li><a href="{{ url('map') }}">Map</a></li>--}}
-                @if(Auth::check())<li><a href="{{ url('admin') }}">Admin</a></li>@endif
-            </ul>
-        </div>
+    <div id="menu">
+        <a class="menu-item" href="{{ url('/') }}">Home</a>
+        @if(isset($settings->show_posts) && $settings->show_posts)
+            <a class="menu-item" href="{{ url('posts') }}">Posts</a>
+        @endif
+        <a class="menu-item ml-auto" href="{{ url('admin') }}">{{ Auth::check() ? Auth::user()->name : 'Admin' }}</a>
     </div>
 
-    <div class="hero">
+    <div id="hero">
         <h1>{{ isset($title_prefix) ? $title_prefix . ' • ' : '' }}Nick Morgan</h1>
     </div>
 </header>
@@ -76,7 +72,10 @@
         },
         modules: [
             {
-                name: 'Homepage'
+                name: 'App_Admin'
+            },
+            {
+                name: 'App_Homepage'
             }
         ]
     });

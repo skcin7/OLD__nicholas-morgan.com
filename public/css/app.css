@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,900);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
@@ -10570,6 +10570,111 @@ a.text-dark:focus {
   }
 }
 
+html#App_Admin #settings textarea {
+  color: initial;
+  font-family: "SFMono-Regular", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 18px;
+  outline: none;
+  padding: 10px;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
+html#App_Admin #settings textarea::-webkit-input-placeholder {
+  color: #888;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+}
+
+html#App_Admin #settings textarea::-ms-input-placeholder {
+  color: #888;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+}
+
+html#App_Admin #settings textarea::placeholder {
+  color: #888;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+}
+
+html#App_Post .body blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+html#App_Post .body blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+html#App_Post .body blockquote p {
+  display: inline;
+}
+
+html#App_Posts #posts {
+  list-style: none;
+  margin-bottom: 10rem;
+}
+
+html#App_Posts #posts h3.year {
+  margin-top: 4rem;
+}
+
+html#App_Posts #posts .post {
+  margin-bottom: 1rem;
+}
+
+html#App_Posts #posts .post span {
+  color: #ccc;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+html#App_Posts #posts .post a {
+  border-bottom: 3px solid #7ef1f9;
+  color: #0151ba;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+  text-decoration: none;
+}
+
+html#App_Posts #posts .post a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+html#App_Posts #posts .post a::before {
+  background-color: #0151ba;
+  bottom: -3px;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.10s ease-in-out 0s;
+  transition: all 0.10s ease-in-out 0s;
+  visibility: hidden;
+  width: 100%;
+}
+
 ::-moz-selection {
   background-color: #FD7F05;
   color: #fff;
@@ -10582,8 +10687,15 @@ a.text-dark:focus {
 
 .alert,
 .breadcrumb {
-  border: 2px solid #888;
   border-radius: 0;
+}
+
+.hover-up {
+  position: relative;
+}
+
+.hover-up:hover {
+  top: -1px;
 }
 
 html {
@@ -10592,61 +10704,19 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: #fff;
   font-size: 16px;
   margin: 0 0 100px;
   padding: 0;
 }
 
 header {
-  background-color: white;
+  background-color: #fff;
   border-top: 4px solid #FD7F05;
   border-bottom: 4px solid gray;
 }
 
-header .menu {
-  border-bottom: 2px solid gray;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .menu .navigation {
-  margin-left: 0;
-  margin-right: 0;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-
-header .menu .navigation .buttons {
-  display: inline-block;
-  height: 40px;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-header .menu .navigation .buttons li {
-  display: inline-block;
-}
-
-header .menu .navigation .buttons li a {
-  color: #5d5d5e;
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 10px;
-  text-decoration: none;
-}
-
-header .menu .navigation .buttons li a:hover {
-  background-color: #E4E2E2;
-}
-
-header > .logo {
+header #logo {
   opacity: .75;
   position: absolute;
   left: 8px;
@@ -10655,13 +10725,36 @@ header > .logo {
   transition: opacity 0.4s ease;
 }
 
-header > .logo:hover {
+header #logo:hover {
   opacity: 1;
 }
 
-header > .hero {
-  background-color: #FD7F05;
-  background-image: url("/images/hollywood_sign.jpg");
+header #menu {
+  border-bottom: 2px solid gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header #menu .menu-item {
+  color: #000;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+header #menu .menu-item:hover {
+  background-color: #ddd;
+}
+
+header #hero {
+  background-color: #2c3429;
+  background-image: url("/images/hollywood.jpg");
   background-position: center center;
   background-size: cover;
   display: -webkit-box;
@@ -10677,22 +10770,14 @@ header > .hero {
   text-align: center;
 }
 
-header > .hero h1 {
+header #hero h1 {
   background-color: #FD7F05;
-  color: white;
+  color: #fff;
   display: inline-block;
   font-size: 46px;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0;
   padding: 0px 20px;
-}
-
-header > .hero h1::-moz-selection {
-  background-color: #1a898a;
-}
-
-header > .hero h1::selection {
-  background-color: #1a898a;
 }
 
 footer {
@@ -10713,34 +10798,36 @@ footer > .container {
 }
 
 footer > .container a {
-  color: #e5e5e5;
+  color: #fff;
 }
 
 footer > .container a:hover {
   color: #FD7F05;
 }
 
-.hover-up {
+.heading {
+  display: block;
+  font-size: 28px;
+  font-weight: 900;
+  margin: 2rem 0 2rem 0;
   position: relative;
 }
 
-.hover-up:hover {
-  top: -1px;
+.heading a {
+  font-size: initial;
+  font-weight: normal;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-/* Tablet, Landscape */
-
-/* Mobile, Landscape */
-
 @media screen and (max-width: 720px) {
-  header > .hero {
+  header #hero {
     height: 120px;
   }
 
-  header > .hero > h1 {
+  header #hero h1 {
     font-size: 24px;
   }
 }
-
-/* Mobile, Portrait */
 

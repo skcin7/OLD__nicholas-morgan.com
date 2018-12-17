@@ -36,7 +36,7 @@
 
 require('./bootstrap');
 window.App = {};
-;(function(app, $, undefined) {
+;(function(app, mousetrap, $, undefined) {
     /**
      * Modules loaded into the application.
      *
@@ -111,6 +111,39 @@ window.App = {};
                 });
             }
         });
+
+        // Autoresize specified <textarea> elements to be expanded
+        // vertically as a user types in them
+        $('.autosize').autosize();
+
+        // Mousetrap events:
+        var scale = 1;
+        mousetrap.bind('m i r r o r enter', function() {
+            scale *= -1;
+            $("html").css("-webkit-transform", "scaleX(" + scale + ")");
+            $("html").css("-moz-transform", "scaleX(" + scale + ")");
+            $("html").css("-o-transform", "scaleX(" + scale + ")");
+            $("html").css("-ms-transform", "scaleX(" + scale + ")");
+            $("html").css("transform", "scaleX(" + scale + ")");
+        });
+
+        var rotate = 0;
+        Mousetrap.bind("r o t a t e enter", function(e) {
+            rotate += 90;
+            if (rotate > 360) {
+                rotate = 0;
+            }
+            $("html").css("-webkit-transform", "rotate(" + rotate + "deg)");
+            $("html").css("-moz-transform", "rotate(" + rotate + "deg)");
+            $("html").css("-o-transform", "rotate(" + rotate + "deg)");
+            $("html").css("-ms-transform", "rotate(" + rotate + "deg)");
+            $("html").css("transform", "rotate(" + rotate + "deg)");
+        });
+
+        // konami code!
+        mousetrap.bind('up up down down left right left right b a enter', function() {
+            window.location = app.url('contra');
+        });
     };
 
     /**
@@ -164,7 +197,25 @@ window.App = {};
         return app.appData.url + path;
     };
 
-})(window.App, jQuery);
+    /**
+     * Stringify a JSON object.
+     *
+     * @param unformattedJson
+     * @param linebreaks
+     * @returns {string}
+     */
+    app.jsonStringify = function(unformattedJson, linebreaks = false) {
+        if(linebreaks) {
+            var stringified = JSON.stringify(unformattedJson, undefined, "\t");
+        }
+        else {
+            var stringified = JSON.stringify(unformattedJson);
+        }
+        return stringified;
+    };
+
+})(window.App, window.Mousetrap, jQuery);
 
 // Load modules:
+require('./modules/Admin');
 require('./modules/Homepage');

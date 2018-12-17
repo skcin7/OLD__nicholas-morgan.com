@@ -153,7 +153,8 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', null),
+    //'domain' => env('SESSION_DOMAIN', null),
+    'domain' => '.' . env('APP_NAME') . '.' . env('APP_TLD'), // Persist across subdomains.
 
     /*
     |--------------------------------------------------------------------------

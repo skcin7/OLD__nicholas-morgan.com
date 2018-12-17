@@ -1,6 +1,6 @@
 ;(function(app, $, undefined) {
     app.modules.push({
-        moduleName: 'Homepage',
+        moduleName: 'App_Homepage',
         initModule: function(config) {
             var module = this;
         }

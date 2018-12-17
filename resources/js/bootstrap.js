@@ -10,8 +10,10 @@
 try {
     // window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
+    window.Mousetrap = require('./lib/mousetrap');
 
     require('bootstrap');
+    require('./lib/jquery.autosize');
     require('./lib/jquery.followTo');
 } catch (e) {}
 
