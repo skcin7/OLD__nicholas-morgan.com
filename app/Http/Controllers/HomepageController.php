@@ -12,7 +12,7 @@ class HomepageController extends Controller
     public function showHomepage()
     {
         return view('homepage')
-            ->with('title_prefix', 'About');
+            ->with('page_title', 'About • Nick Morgan');
     }
 
 }

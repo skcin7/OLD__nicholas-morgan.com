@@ -12,7 +12,7 @@ class ContraController extends Controller
     public function play()
     {
         return view('contra')
-            ->with('title_prefix', 'Play Contra!');
+            ->with('page_title', 'Play Contra!');
     }
 
 }

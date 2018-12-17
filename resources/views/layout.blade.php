@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>{{ (env('APP_ENV') === "local" ? "[Dev] " : "") . (isset($title_prefix) ? $title_prefix . ' • ' : '') }}Nick Morgan</title>
+    <title>{{ (env('APP_ENV') === "local" ? "[Dev] " : "") . (isset($page_title) ? $page_title : 'Nick Morgan') }}</title>
 
     <link href="{{ url('css/app.css?random=' . rand(1,99999)) }}" rel="stylesheet" type="text/css">
     <link rel="apple-touch-icon" sizes="57x57" href="{{ url('favicon/apple-icon-57x57.png') }}">
@@ -50,7 +50,7 @@
     </div>
 
     <div id="hero">
-        <h1>{{ isset($title_prefix) ? $title_prefix . ' • ' : '' }}Nick Morgan</h1>
+        <h1>{{ isset($page_title) ? $page_title : 'Nick Morgan' }}</h1>
     </div>
 </header>
 <section id="@yield('section_id')">

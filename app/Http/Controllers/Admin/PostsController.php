@@ -14,7 +14,7 @@ class PostsController extends Controller
     public function showPosts()
     {
         return view('admin.posts')
-            ->with('title_prefix', 'Posts');
+            ->with('page_title', 'Posts • Nick Morgan');
     }
 
     /**
@@ -32,7 +32,7 @@ class PostsController extends Controller
         }
 
         return view('admin.post')
-            ->with('title_prefix', 'Post')
+            ->with('page_title', 'Post • Nick Morgan')
             ->with('post', $post);
     }
 

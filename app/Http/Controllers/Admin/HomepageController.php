@@ -16,7 +16,7 @@ class HomepageController extends Controller
     public function showHomepage()
     {
         return view('admin.homepage')
-            ->with('title_prefix', 'Admin');
+            ->with('page_title', 'Admin • Nick Morgan');
     }
 
     public function saveGlobalSettings()
