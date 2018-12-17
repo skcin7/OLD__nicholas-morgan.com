@@ -1,19 +1,18 @@
-@extends('layout')
+<!DOCTYPE html>
 
-@section('pageName', 'App_Contra')
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Embedding Example</title>
 
-@section('content')
-
-    <div class="container">
-
-        @include('_errors')
-
-        <h3 class="heading">{{ $post->subject }}</h3>
-
-        <div class="body">
-            {!! Markdown::convertToHtml( $post->body ) !!}
-        </div>
-
-    </div>
-
-@endsection
+    <script type="text/javascript" src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
+    <script type="text/javascript" src="{{ url('nes/nes-embed.js') }}"></script>
+    <script>window.onload = function(){nes_load_url("nes-canvas", "{{ url('nes/Contra.nes') }}");}</script>
+</head>
+<body>
+<div style="margin: auto; width: 75%;">
+    <canvas id="nes-canvas" width="256" height="240" style="width: 100%"/>
+</div>
+<p>DPad: Arrow keys<br/>Start: Return, Select: Tab<br/>A Button: A, B Button: S</p>
+</body>
+</html>
