@@ -146,7 +146,7 @@ window.App = {};
         });
 
         // konami code!
-        mousetrap.bind('up up down down left right left right b a enter', function() {
+        mousetrap.bind(['up up down down left right left right b a enter', 'c o n t r a enter'], function() {
             window.location = app.url('contra');
         });
     };

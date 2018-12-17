@@ -26,10 +26,9 @@
     <meta name="msapplication-TileImage" content="{{ url('favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
 
-    {{--<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto+Slab' rel='stylesheet' type='text/css'>--}}
-
     <meta name="title" content="Nick Morgan">
     <meta name="author" content="Nick Morgan">
+    <meta name="twitter:site" content="@skcin7">
     <meta name="description" content="Welcome to the personal website of Nick Morgan.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>

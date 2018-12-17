@@ -124,7 +124,7 @@ function nes_load_data(canvas_id, rom_data){
     nes_boot(rom_data);
 }
 
-function nes_load_url(canvas_id, path){
+function nes_load_url(canvas_id, path) {
     nes_init(canvas_id);
 
     var req = new XMLHttpRequest();

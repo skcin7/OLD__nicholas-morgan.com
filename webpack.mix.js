@@ -21,3 +21,4 @@ mix.js([
 
 // CSS
 mix.sass("resources/sass/app.scss", "public/css");
+mix.sass("resources/sass/nes.scss", "public/css");
