@@ -13,9 +13,9 @@
 
             <p>I am based in Los Angeles, CA. I work in <a class="hover-up" href="https://laravel.com" target="_blank">Laravel - The PHP Framework for Web Artisans</a> because I like things that are good, and use a test-driven (TDD) development approach.</p>
 
-            <p>My experience covers Server Configuration, Database Administration, HTML5, Security, git Version Control System, Agile/Scrum, Business Development, Search Engine Optimization, OAuth2 implementation, and probably more.</p>
+            <p>My experience covers server configuration, database administration, HTML5 and front-end development (including SCSS and various JavaScript frameworks), SSH key configuration and basic security, Git version control system, working in team based agile/scrum environments, business development, search engine optimization, OAuth2 implementation, API development and implementation, and probably more. TL;DR: I'm valuable, bitch!</p>
 
-            <p><a class="hover-up" href="https://github.com/skcin7" target="_blank">Github</a></p>
+            <p>I use Bitbucket now (free private repositories yo!) but here's my public <a class="hover-up" href="https://github.com/skcin7" target="_blank">Github</a>.</p>
         </div>
 
     </div>

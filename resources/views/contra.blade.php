@@ -27,63 +27,63 @@
             </div>
             <div class="modal-body">
 
-                <table class="table table-bordered table-hover table-nonfluid">
+                <table class="table table-bordered table-hover table-nonfluid table-sm table-responsive-sm">
                     <thead class="thead-dark">
                         <tr>
                             <th>Button</th>
                             <th>Player 1</th>
-                            <th>Player 2</th>
+                            <th>Player 2 <span style="font-weight: normal;">(Coming Soon)</span></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Left</td>
                             <td>Left</td>
-                            <td>Num-4</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>Right</td>
                             <td>Right</td>
-                            <td>Num-6</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>Up</td>
                             <td>Up</td>
-                            <td>Num-8</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>Down</td>
                             <td>Down</td>
-                            <td>Num-2</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>A</td>
-                            <td>X</td>
-                            <td>Num-7</td>
+                            <td>S</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>B</td>
-                            <td>Z</td>
-                            <td>Num-9</td>
+                            <td>A</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>Start</td>
                             <td>Enter</td>
-                            <td>Num-1</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>Select</td>
-                            <td>Right Ctrl</td>
-                            <td>Num-3</td>
+                            <td>Space</td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
 
-                <p class="mb-0 text-muted">Sound does not work in Safari. Appears to work in all other major browsers.</p>
-                <p class="mb-0 text-muted">Thanks and credit to <a href="https://github.com/bfirsh/jsnes" target="_blank">JSNES</a> for the emulator!</p>
+                <p class="mb-0 text-muted">Note: Sound does not work in Safari, but appears to work in all other major browsers. Make sure to click inside the game canvas area to ensure the browser is focused on the game so that your input keys will be recognized. Will you destroy the Vile Red Falcon and save the universe?</p>
+                <p class="mb-0 text-muted"><small><strong>Thanks and credit to <a href="https://github.com/bfirsh/jsnes" target="_blank">JSNES</a> for the extremely awesome emulator!</strong></small></p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" type="button" data-dismiss="modal">Got It</button>
+                <button class="btn btn-primary" type="button" data-dismiss="modal">Okay Whatever</button>
             </div>
         </div>
     </div>
