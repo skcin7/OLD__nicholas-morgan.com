@@ -15,7 +15,7 @@
 
             <p>My experience covers server configuration, database administration, HTML5 and front-end development (including SCSS and various JavaScript frameworks), SSH key configuration and basic security, Git version control system, working in team based agile/scrum environments, business development, search engine optimization, OAuth2 implementation, API development and implementation, and probably more. TL;DR: I'm valuable, bitch!</p>
 
-            <p>I use Bitbucket now (free private repositories yo!) but here's my public <a class="hover-up" href="https://github.com/skcin7" target="_blank">Github</a>.</p>
+            <p>I use Bitbucket now to host my projects (free private repositories!), but <a class="hover-up" href="https://github.com/skcin7" target="_blank">here's my public Github</a>.</p>
         </div>
 
     </div>
