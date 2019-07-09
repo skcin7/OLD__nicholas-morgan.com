@@ -14,7 +14,7 @@ try {
 
     require('bootstrap');
     require('./lib/jquery.autosize');
-    require('./lib/jquery.followTo');
+    // require('./lib/jquery.followto');
 } catch (e) {}
 
 /**

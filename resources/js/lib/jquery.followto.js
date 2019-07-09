@@ -1,8 +1,8 @@
 // jQuery plugin to keep the logo following
 // the page, but below the header menu.
-var windw = this;
-$.fn.followTo = function ( ) {
-    var $this = this,
+let windw = this;
+$.fn.followto = function ( ) {
+    let $this = this,
         $window = $(windw);
 
     $window.scroll(function(e){
