@@ -101,6 +101,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/backup-manager/backup-manager" />
+      <path value="$PROJECT_DIR$/vendor/srmklive/flysystem-dropbox-v2" />
+      <path value="$PROJECT_DIR$/vendor/skcin7/backup-manager" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
