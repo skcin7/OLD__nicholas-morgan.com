@@ -14,7 +14,8 @@
         "graham-campbell/markdown": "^10.2",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "skcin7/backup-manager": "^1.0@dev",
+        "skcin7/database-manager": "^0.0.1@dev",
+        "skcin7/laravel-settings": "dev-master",
         "srmklive/flysystem-dropbox-v2": "^1.0"
     },
     "require-dev": {

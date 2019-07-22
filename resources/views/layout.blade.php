@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>{{ (env('APP_ENV') === "local" ? "[Dev] " : "") . (isset($page_title) ? $page_title : 'Nick Morgan') }}</title>
+    <title>{{ (env('APP_ENV') === "local" ? "[Dev] " : "") . (isset($title_prefix) ? $title_prefix : 'Nick Morgan') }}</title>
 
     <link href="{{ url('css/app.css?random=' . rand(1,99999)) }}" rel="stylesheet" type="text/css">
     <link rel="apple-touch-icon" sizes="57x57" href="{{ url('favicon/apple-icon-57x57.png') }}">
@@ -43,6 +43,8 @@
         @if(isset($settings->show_posts) && $settings->show_posts)
             <a class="menu-item" href="{{ url('posts') }}">Posts</a>
         @endif
+        <a class="menu-item" href="{{ url('skills') }}">Skills</a>
+        <a class="menu-item" href="{{ url('projects') }}">Projects</a>
         @if(Auth::check())
             <a class="menu-item ml-auto" href="{{ url('admin') }}">Admin</a>
         @endif
@@ -58,7 +60,7 @@
 <footer>
     <div class="container">
         <div class="my-0">
-            © {{ date('Y') }} <a href="mailto:nick@nicholas-morgan.com">Nick Morgan</a>. All Rights Reserved. <em>ALL</em> of them.
+            © {{ date('Y') }} <a href="mailto:nick@nicholas-morgan.com">Nick Morgan</a>. All Rights Reserved. <a href="https://paste.nicholas-morgan.com">Paste</a>
             <a href="http://instagram.com/skcin7" target="_blank"><i class="icon-instagram"></i></a>
             <a href="http://github.com/skcin7" target="_blank"><i class="icon-git"></i></a>
         </div>

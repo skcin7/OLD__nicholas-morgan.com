@@ -15,4 +15,5 @@ class HomepageController extends Controller
             ->with('page_title', 'About • Nick Morgan');
     }
 
+
 }
