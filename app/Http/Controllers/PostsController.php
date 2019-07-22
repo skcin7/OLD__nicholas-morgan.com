@@ -19,7 +19,7 @@ class PostsController extends Controller
         });
 
         return view('posts')
-            ->with('page_title', 'Posts • Nick Morgan')
+            ->with('title_prefix', 'Posts')
             ->with('posts', $posts);
     }
 
@@ -28,7 +28,7 @@ class PostsController extends Controller
         $post = $this->getPostByIdentifier($identifier);
 
         return view('post')
-            ->with('page_title', $post->subject)
+            ->with('title_prefix', $post->subject)
             ->with('post', $post);
     }
 

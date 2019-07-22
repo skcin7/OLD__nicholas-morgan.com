@@ -11,14 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
-// Assets:
-mix.copyDirectory('resources/fontello/font', 'public/fonts');
-
-// JS:
+// JavaScript:
 mix.js([
     "resources/js/app.js"
-], "public/js").sourceMaps();
+], "public/js/app.js")
+    .sourceMaps()
+    .version();
 
-// CSS
-mix.sass("resources/sass/app.scss", "public/css");
-mix.sass("resources/sass/nes.scss", "public/css");
+// CSS:
+mix.sass("resources/sass/app.scss", "public/css/app.css")
+    .sourceMaps()
+    .version();

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('pageName', 'App_Posts')
+@section('pageName', 'Posts')
 
 @section('content')
 
@@ -10,10 +10,10 @@
 
         @if($posts->count())
 
-            <ul id="posts">
-                @foreach($posts as $year => $values)
-                    <h3 class="heading">{{ $year }}</h3>
-                    @foreach($values as $post)
+            <ul class="my-3" id="posts">
+                @foreach($posts as $year => $year_posts)
+                    <h1>{{ $year }}</h1>
+                    @foreach($year_posts as $post)
                         <li class="post">
                             <span>{{ $post->created_at->format('F j') }}</span>
                             <a href="{{ url('posts/' . $post->getIdentifier()) }}">{{ $post->subject }}</a>

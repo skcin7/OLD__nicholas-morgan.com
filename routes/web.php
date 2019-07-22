@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomepageController@showHomepage');
+Route::get('/', 'HomepageController@showWelcomePage');
 Route::get('login', 'AuthController@showLoginPage');
 Route::post('login', 'AuthController@login');
 Route::get('posts', 'PostsController@showAllPosts');

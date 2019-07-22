@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('pageName', 'App_Login')
+@section('pageName', 'Login')
 
 @section('content')
 
@@ -14,7 +14,7 @@
                     @csrf
 
                     <div class="form-group row">
-                        <label class="col-sm-4 col-form-label text-md-right" for="name">Name</label>
+                        <label class="col-sm-4 col-form-label text-md-right" for="name">Who Are You:</label>
 
                         <div class="col-md-6">
                             <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" id="name" name="name" type="text"  value="{{ old('name') }}" required autofocus>
@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label class="col-md-4 col-form-label text-md-right" for="password">Password</label>
+                        <label class="col-md-4 col-form-label text-md-right" for="password">Speak, Friend, and Enter:</label>
 
                         <div class="col-md-6">
                             <input class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}" id="password" name="password" type="password" required>
@@ -43,7 +43,7 @@
 
                     <div class="form-group row">
                         <div class="col-md-6 offset-md-4">
-                            <div class="form-check">
+                            <div class="form-check abc-checkbox abc-checkbox-primary">
                                 <input class="form-check-input" id="remember" name="remember" type="checkbox" checked>
 
                                 <label class="form-check-label" for="remember">
@@ -56,7 +56,7 @@
                     <div class="form-group row mb-0">
                         <div class="col-md-8 offset-md-4">
                             <button type="submit" class="btn btn-primary">
-                                Login
+                                Enter
                             </button>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('pageName', 'App_AdminPosts')
+@section('pageName', 'Admin_Posts')
 
 @section('content')
 

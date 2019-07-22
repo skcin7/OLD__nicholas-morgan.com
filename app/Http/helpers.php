@@ -10,7 +10,17 @@
 */
 
 /**
- * Slugify some text
+ * Determine if user is admin.
+ *
+ * @return bool
+ */
+function admin() {
+    return auth()->check() && auth()->user()->isAdmin();
+}
+
+/**
+ * Slugify some text.
+ *
  * @param type $str
  * @return type
  */

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('pageName', 'App_Skills')
+@section('pageName', 'Skills')
 
 @section('content')
 

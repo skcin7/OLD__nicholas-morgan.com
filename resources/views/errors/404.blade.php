@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('pageName', 'App_404')
+@section('pageName', '404')
 
 @section('content')
 

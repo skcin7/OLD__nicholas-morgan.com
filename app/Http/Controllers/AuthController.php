@@ -19,8 +19,12 @@ class AuthController extends Controller
      */
     public function showLoginPage()
     {
+        if(Auth::check()) {
+
+        }
+
         return view('login')
-            ->with('page_title', 'Login • Nick Morgan');
+            ->with('title_prefix', 'Login');
     }
 
     /**

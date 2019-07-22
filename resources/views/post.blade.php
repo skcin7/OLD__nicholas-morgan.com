@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('pageName', 'App_Post')
+@section('pageName', 'Post')
 
 @section('content')
 
@@ -8,7 +8,7 @@
 
         @include('_errors')
 
-        <h3 class="heading">{{ $post->subject }}</h3>
+        <h1 class="mt-3">{{ $post->subject }}</h1>
 
         <div class="body">
             {!! Markdown::convertToHtml( $post->body ) !!}

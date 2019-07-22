@@ -1,4 +1,9 @@
 
-.icon-github:before { content: '\e800'; } /* '' */
-.icon-git:before { content: '\e801'; } /* '' */
-.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-ok:before { content: '\e800'; } /* '' */
+.icon-cancel:before { content: '\e801'; } /* '' */
+.icon-info-circled:before { content: '\e802'; } /* '' */
+.icon-help-circled:before { content: '\e803'; } /* '' */
+.icon-github:before { content: '\e804'; } /* '' */
+.icon-git:before { content: '\e805'; } /* '' */
+.icon-copyright:before { content: '\f1f9'; } /* '' */
+.icon-instagram:before { content: '\f32d'; } /* '' */

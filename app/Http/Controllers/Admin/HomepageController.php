@@ -15,8 +15,8 @@ class HomepageController extends Controller
      */
     public function showHomepage()
     {
-        return view('admin.homepage')
-            ->with('page_title', 'Admin • Nick Morgan');
+        return view('admin.home')
+            ->with('title_prefix', 'Admin');
     }
 
     public function saveGlobalSettings()
@@ -32,7 +32,7 @@ class HomepageController extends Controller
 
         return redirect('admin')
             ->with('flash_message', [
-                'message' => 'Global settings have been saved!',
+                'message' => 'Global Settings have been saved!',
             ]);
     }
 

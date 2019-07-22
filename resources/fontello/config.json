@@ -7,22 +7,52 @@
   "ascent": 850,
   "glyphs": [
     {
-      "uid": "4c1ef492f1d2c39a2250ae457cee2a6e",
-      "css": "instagram",
-      "code": 61805,
+      "uid": "ce7452abce8b55ded1c393997a51e6b3",
+      "css": "ok",
+      "code": 59392,
+      "src": "elusive"
+    },
+    {
+      "uid": "499b745a2e2485bdd059c3a53d048e5f",
+      "css": "cancel",
+      "code": 59393,
+      "src": "elusive"
+    },
+    {
+      "uid": "2355991b4045d64b08fb82988109c0ee",
+      "css": "info-circled",
+      "code": 59394,
+      "src": "elusive"
+    },
+    {
+      "uid": "2105aa6ffb4434ebf82a20d97ac1ed25",
+      "css": "help-circled",
+      "code": 59395,
+      "src": "elusive"
+    },
+    {
+      "uid": "4a74a0f87d4089efe7aba1825bff4193",
+      "css": "copyright",
+      "code": 61945,
       "src": "fontawesome"
     },
     {
       "uid": "aa18911cd641967c899c575aeb80cd7e",
       "css": "github",
-      "code": 59392,
+      "code": 59396,
       "src": "elusive"
     },
     {
       "uid": "798f480ad47c7c7fa6c64ece88ea2180",
       "css": "git",
-      "code": 59393,
+      "code": 59397,
       "src": "elusive"
+    },
+    {
+      "uid": "0fbfb1cd7a847c88ea4c141d0e1bbdb5",
+      "css": "instagram",
+      "code": 62253,
+      "src": "entypo"
     }
   ]
 }
