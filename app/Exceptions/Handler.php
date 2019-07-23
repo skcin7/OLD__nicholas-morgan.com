@@ -4,6 +4,8 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\ServiceUnavailableHttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -29,31 +31,32 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param  \Exception  $exception
-     * @return void
+     * @param Exception $ex
+     * @return mixed|void
+     * @throws Exception
      */
-    public function report(Exception $exception)
+    public function report(Exception $ex)
     {
-        parent::report($exception);
+        parent::report($ex);
     }
 
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $exception
-     * @return \Illuminate\Http\Response
+     * @param \Illuminate\Http\Request $request
+     * @param Exception $ex
+     * @return \Illuminate\Http\Response|\Symfony\Component\HttpFoundation\Response
      */
-    public function render($request, Exception $exception)
+    public function render($request, Exception $ex)
     {
-        if($exception instanceof NotFoundHttpException) {
-            return response()->view('errors.404', ['exception' => $exception], 404);
+        if($ex instanceof NotFoundHttpException) {
+            return response()->view('errors.404', ['ex' => $ex], 404);
         }
 
-        if($exception instanceof ServiceUnavailableHttpException) {
-            return response()->view('errors.503', ['exception' => $exception], 503);
+        if($ex instanceof ServiceUnavailableHttpException) {
+            return response()->view('errors.503', ['ex' => $ex], 503);
         }
 
-        return parent::render($request, $exception);
+        return parent::render($request, $ex);
     }
 }

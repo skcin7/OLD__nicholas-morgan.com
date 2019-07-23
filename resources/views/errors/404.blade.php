@@ -4,15 +4,15 @@
 
 @section('content')
 
-    <div class="container text-center">
+    <div class="container">
 
         @include('_errors')
 
-        <h3 class="heading">404 - Page Not Found</h3>
+        <h1 class="mt-3">404 - Page Not Found</h1>
 
-        <p class="my-5 text-muted">{!! $exception->getMessage() ? $exception->getMessage() : 'The page you specified can not be found!' !!}</p>
+        <p>{!! $ex->getMessage() ? $ex->getMessage() : 'The page you specified can not be found!' !!}</p>
 
-        <p><a href="{{ url('/') }}">Home</a></p>
+        <p><a href="{{ url('/') }}">« Homepage</a></p>
 
     </div>
 

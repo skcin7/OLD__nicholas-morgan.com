@@ -20,6 +20,10 @@ Route::get('logout', 'AuthController@logout');
 Route::get('contra', 'ContraController@play');
 Route::get('skills', 'AppController@showSkillsPage');
 
+
+Route::get('home', 'HomeController@showHomePage');
+
+
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
     Route::get('/', 'Admin\HomepageController@showHomepage');
     Route::post('settings', 'Admin\HomepageController@saveGlobalSettings');
