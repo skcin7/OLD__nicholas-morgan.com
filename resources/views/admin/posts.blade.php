@@ -17,7 +17,7 @@
 
         @if($posts->count())
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover table-border">
                     <thead class="thead-dark">
                     <tr>
                         <th>Date</th>
