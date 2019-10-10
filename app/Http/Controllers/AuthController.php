@@ -46,7 +46,7 @@ class AuthController extends Controller
             return $this->sendLockoutResponse($request);
         }
 
-        if ($this->attemptLogin($request)) {
+        if($this->attemptLogin($request)) {
             return $this->sendLoginResponse($request);
         }
 
