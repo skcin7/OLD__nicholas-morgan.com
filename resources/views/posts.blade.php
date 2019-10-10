@@ -16,7 +16,7 @@
                     @foreach($year_posts as $post)
                         <li class="post">
                             <span>{{ $post->created_at->format('F j') }}</span>
-                            <a href="{{ url('posts/' . $post->slug()) }}">{{ $post->subject }}</a>
+                            <a href="{{ url('posts/' . $post->slug()) }}">{{ $post->title }}</a>
                         </li>
                     @endforeach
                 @endforeach

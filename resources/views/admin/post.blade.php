@@ -11,7 +11,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ url('admin') }}"><i class="icon-home"></i> Admin</a></li>
             <li class="breadcrumb-item"><a href="{{ url('admin/posts') }}">Posts</a></li>
-            <li class="breadcrumb-item">{!! $post->exists ? '[<code>' . $post->id . '</code>] ' . $post->subject : 'Add Post' !!}</li>
+            <li class="breadcrumb-item">{!! $post->exists ? '[<code>' . $post->id . '</code>] ' . $post->title : 'Add Post' !!}</li>
         </ol>
 
         <form action="{{ url($post->exists ? 'admin/posts/' . $post->id : 'admin/posts/add') }}" method="post">
@@ -19,14 +19,14 @@
 
             <div class="form-group row">
                 <div class="col-md-12">
-                    <input class="form-control" name="subject" placeholder="Subject" type="text" value="{{ $post->exists ? old('subject') ? old('subject') : $post->subject : old('subject') }}" required>
+                    <input class="form-control" name="title" placeholder="Title" type="text" value="{{ $post->exists ? $post->title : old('title') }}" required>
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-md-12">
                     <div class="input-group">
-                        <textarea class="form-control autosize" name="body" placeholder="Body" rows="4">{{ $post->exists ? old('body') ? old('body') : $post->body : old('body') }}</textarea>
+                        <textarea class="form-control autosize" name="body" placeholder="Body" rows="6">{{ $post->exists ? $post->body : old('body') }}</textarea>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@ class Post extends Model
      * @var array
      */
     protected $attributes = [
-        'subject' => '',
+        'title' => '',
         'body' => '',
         'published' => false,
     ];
@@ -30,7 +30,7 @@ class Post extends Model
      * @var array
      */
     protected $casts = [
-        'subject' => 'string',
+        'title' => 'string',
         'body' => 'string',
         'published' => 'boolean',
         'created_at' => 'datetime',
@@ -43,7 +43,7 @@ class Post extends Model
      * @var array
      */
     protected $fillable = [
-        'subject',
+        'title',
         'body',
         'published',
     ];
@@ -55,7 +55,7 @@ class Post extends Model
      */
     public function slug()
     {
-        return slugify($this->id . ' ' . $this->subject);
+        return slugify($this->id . ' ' . $this->title);
     }
 
 

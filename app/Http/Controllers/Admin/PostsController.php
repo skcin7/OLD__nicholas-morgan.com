@@ -55,7 +55,7 @@ class PostsController extends Controller
     public function processPost(Request $request, $postID = null)
     {
         $request->validate([
-            'subject' => 'required|string',
+            'title' => 'required|string',
             'body' => 'required|string',
             'published' => 'nullable',
         ]);
@@ -75,7 +75,7 @@ class PostsController extends Controller
             $post = new Post();
         }
 
-        $post->subject = $request->input('subject');
+        $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->published = $request->input('published');
         $post->save();

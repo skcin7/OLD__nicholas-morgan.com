@@ -32,7 +32,7 @@
                                 {{ $post->created_at->format('n/j/Y') }}
                             </td>
                             <td>
-                                <a href="{{ url('admin/posts/' . $post->id) }}">{{ $post->subject }}</a>
+                                <a href="{{ url('admin/posts/' . $post->id) }}">{{ $post->title }}</a>
                             </td>
                             <td class="text-right">
                                 <a class="btn btn-primary" href="{{ url('admin/posts/' . $post->id) }}">Edit</a>
