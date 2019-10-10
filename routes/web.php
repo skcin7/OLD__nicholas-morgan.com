@@ -26,8 +26,8 @@ Route::get('home', 'HomeController@showHomePage');
 
 
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
-    Route::get('/', 'Admin\HomepageController@showHomepage');
-    Route::post('settings', 'Admin\HomepageController@saveGlobalSettings');
+    Route::get('/', 'Admin\AdminController@showAdminHome');
+    Route::post('settings', 'Admin\SettingsController@saveSettings');
     Route::get('posts', 'Admin\PostsController@showPosts');
     Route::get('posts/add', 'Admin\PostsController@showPost');
     Route::post('posts/add', 'Admin\PostsController@processPost');

@@ -2,24 +2,21 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\ValidationRules\MyJsonValidation;
 use Setting;
 
-class HomepageController extends Controller
+class SettingsController extends Controller
 {
     /**
-     * Show the home page of the application.
+     * Save settings.
      *
-     * @return type
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Validation\ValidationException
      */
-    public function showHomepage()
-    {
-        return view('admin.home')
-            ->with('title_prefix', 'Admin');
-    }
-
-    public function saveGlobalSettings()
+    public function saveSettings(Request $request)
     {
         $this->validate(request(), [
             'settings' => ['required', 'string', new MyJsonValidation()],
@@ -32,7 +29,7 @@ class HomepageController extends Controller
 
         return redirect('admin')
             ->with('flash_message', [
-                'message' => 'Global Settings have been saved!',
+                'message' => 'Settings have been saved!',
             ]);
     }
 
