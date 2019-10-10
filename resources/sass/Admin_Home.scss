@@ -9,16 +9,14 @@ main#page-content[name=Admin_Home] {
             }
 
             color: initial;
-            font-family: "SFMono-Regular", "Courier New", monospace;
-            font-size: 16px;
+            font-family: $font-family-monospace;
+            font-size: 14px;
             line-height: 18px;
             outline: none;
             padding: 10px;
             tab-size: 4;
             -webkit-appearance: none;
             -webkit-border-radius: 0px;
-
-
 
             //-webkit-appearance: none;
             //

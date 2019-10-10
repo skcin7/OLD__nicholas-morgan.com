@@ -13,6 +13,8 @@
             <li class="breadcrumb-item">Posts</li>
         </ol>
 
+        <h1>Posts</h1>
+
         <h3 class="heading">
             Posts
             <a href="{{ url('admin/posts/add') }}">Add Post</a>
