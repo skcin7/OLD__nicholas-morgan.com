@@ -57,10 +57,10 @@ class PostsController extends Controller
             'published' => 'nullable',
         ]);
 
-        if(! is_null($postID)) {
+        if (!is_null($postID)) {
             $post = $this->getPostByID($postID);
 
-            if($request->input('delete_post')) {
+            if ($request->input('delete_post')) {
                 $post->delete();
 
                 return redirect('admin/posts')
@@ -68,8 +68,7 @@ class PostsController extends Controller
                         'message' => 'Post has been deleted!',
                     ]);
             }
-        }
-        else {
+        } else {
             $post = new Post();
         }
 
@@ -78,24 +77,9 @@ class PostsController extends Controller
         $post->published = $request->input('published');
         $post->save();
 
-        if(! $post->wasRecentlyCreated) {
-            return $this->generateRedirectResponse('saved', $post);
-        }
-
-        return $this->generateRedirectResponse('created', $post);
-    }
-
-    /**
-     * Generate the redirected HTTP response.
-     * @param string $verb
-     * @param null $post
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    private function generateRedirectResponse($verb = 'created', $post = null)
-    {
-        return redirect($verb !== 'deleted' ? 'admin/posts/' . $post->id : 'admin/posts')
+        return redirect('admin/posts/' . $post->slug())
             ->with('flash_message', [
-                'message' => '[<code>' . $post->id . '</code>] <strong>' . $post->subject . '</strong> - has been ' . $verb . '!',
+                'message' => 'Post has been saved!',
             ]);
     }
 
