@@ -15,11 +15,6 @@
 
         <h1>Posts</h1>
 
-        <h3 class="heading">
-            Posts
-            <a href="{{ url('admin/posts/add') }}">Add Post</a>
-        </h3>
-
         <ul class="list-unstyled">
             @foreach(App\Post::orderBy('created_at', 'desc')->get() as $post)
                 <li>
@@ -28,6 +23,8 @@
                 </li>
             @endforeach
         </ul>
+
+        <a class="btn btn-primary" href="{{ url('admin/posts/add') }}">Add Post</a>
 
     </div>
 
