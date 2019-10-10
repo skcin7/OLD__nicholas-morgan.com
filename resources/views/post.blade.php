@@ -8,7 +8,7 @@
 
         @include('_errors')
 
-        <h1 class="mt-3">{{ $post->subject }}</h1>
+        <h1>{{ $post->subject }}</h1>
 
         <div class="body">
             {!! Markdown::convertToHtml( $post->body ) !!}

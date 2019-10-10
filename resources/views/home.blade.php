@@ -8,7 +8,7 @@
 
         @include('_errors')
 
-        <h1 class="mt-3">Home</h1>
+        <h1>Home</h1>
 
         <p>Welcome Home!</p>
 

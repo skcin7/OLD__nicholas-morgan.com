@@ -10,7 +10,7 @@
 
         @if($posts->count())
 
-            <ul class="my-3" id="posts">
+            <ul id="posts">
                 @foreach($posts as $year => $year_posts)
                     <h1>{{ $year }}</h1>
                     @foreach($year_posts as $post)

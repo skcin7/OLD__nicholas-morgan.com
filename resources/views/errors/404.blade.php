@@ -8,7 +8,7 @@
 
         @include('_errors')
 
-        <h1 class="mt-3">404 - Page Not Found</h1>
+        <h1>404 - Page Not Found</h1>
 
         <p>{!! $ex->getMessage() ? $ex->getMessage() : 'The page you specified can not be found!' !!}</p>
 

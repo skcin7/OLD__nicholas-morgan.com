@@ -8,7 +8,7 @@
 
         @include('_errors')
 
-        <ol class="breadcrumb my-3">
+        <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ url('admin') }}"><i class="icon-home"></i> Admin</a></li>
             <li class="breadcrumb-item">Posts</li>
         </ol>

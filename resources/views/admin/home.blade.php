@@ -8,7 +8,7 @@
 
         @include('_errors')
 
-        <h1 class="mt-3">Admin</h1>
+        <h1>Admin</h1>
 
         <ul class="list-unstyled mb-5">
             <li>
