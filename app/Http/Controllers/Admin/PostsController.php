@@ -16,8 +16,11 @@ class PostsController extends Controller
      */
     public function showPosts(Request $request)
     {
+        $postsQuery = Post::from('posts');
+
         return view('admin.posts')
-            ->with('title_prefix', 'Posts');
+            ->with('title_prefix', 'Posts')
+            ->with('posts', $postsQuery->paginate($this->perPage));
     }
 
     /**

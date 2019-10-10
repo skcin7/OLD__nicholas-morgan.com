@@ -46,16 +46,6 @@
             <p>No posts.</p>
         @endif
 
-
-        <ul class="list-unstyled">
-            @foreach(App\Post::orderBy('created_at', 'desc')->get() as $post)
-                <li>
-                    {{ $post->created_at->format('n/j/Y') }} -
-                    <a href="{{ url('admin/posts/' . $post->id) }}">{{ $post->subject }}</a>
-                </li>
-            @endforeach
-        </ul>
-
         <a class="btn btn-primary" href="{{ url('admin/posts/add') }}">Add Post</a>
 
     </div>

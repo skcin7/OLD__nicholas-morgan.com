@@ -16,11 +16,8 @@ class AdminController extends Controller
      */
     public function showAdminHome(Request $request)
     {
-        $postsQuery = Post::from('posts');
-
         return view('admin.home')
-            ->with('title_prefix', 'Admin')
-            ->with('posts', $postsQuery->paginate($this->perPage));
+            ->with('title_prefix', 'Admin');
     }
 
 }
