@@ -15,6 +15,38 @@
 
         <h1>Posts</h1>
 
+        @if($posts->count())
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Date</th>
+                        <th>Title</th>
+                        <th class="text-right"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($posts as $post)
+                        <tr>
+                            <td>
+                                {{ $post->created_at->format('n/j/Y') }}
+                            </td>
+                            <td>
+                                <a href="{{ url('admin/posts/' . $post->id) }}">{{ $post->subject }}</a>
+                            </td>
+                            <td class="text-right">
+                                <a class="btn btn-primary" href="{{ url('admin/posts/' . $post->id) }}">Edit</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        @else
+            <p>No posts.</p>
+        @endif
+
+
         <ul class="list-unstyled">
             @foreach(App\Post::orderBy('created_at', 'desc')->get() as $post)
                 <li>

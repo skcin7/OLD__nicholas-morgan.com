@@ -13,6 +13,13 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     /**
+     * Number of entries in a paginated response.
+     *
+     * @var int
+     */
+    protected $perPage = 100;
+
+    /**
      * Get a post by ID.
      *
      * @param $postID
