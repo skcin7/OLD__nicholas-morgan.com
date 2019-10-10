@@ -31,7 +31,8 @@
 
         <div id="menu">
             <a class="menu-item" href="{{ url('/') }}">Home</a>
-            @if(isset($settings->show_posts) && $settings->show_posts)
+
+            @if(Setting::get('show_posts'))
                 <a class="menu-item" href="{{ url('posts') }}">Posts</a>
             @endif
 

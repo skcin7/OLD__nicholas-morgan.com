@@ -18,6 +18,6 @@ class MyViewComposer
     public function compose(View $view)
     {
         // Make global settings available in all views:
-        $view->with('settings', json_decode(Setting::get('global')));
+//        $view->with('settings', json_decode(Setting::get('global')));
     }
 }
