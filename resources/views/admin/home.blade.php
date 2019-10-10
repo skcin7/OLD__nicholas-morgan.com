@@ -12,8 +12,6 @@
             <li class="breadcrumb-item">Admin</li>
         </ol>
 
-        <h1>Admin</h1>
-
         <ul class="list-unstyled mb-5">
             <li>
                 <a href="{{ url('admin/posts') }}">Posts</a>

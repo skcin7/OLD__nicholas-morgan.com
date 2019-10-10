@@ -13,8 +13,6 @@
             <li class="breadcrumb-item">Posts</li>
         </ol>
 
-        <h1>Posts</h1>
-
         @if($posts->count())
             <div class="table-responsive">
                 <table class="table table-hover table-border">
