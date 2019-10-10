@@ -19,7 +19,7 @@ class AuthController extends Controller
      *
      * @return type
      */
-    public function showLoginPage()
+    public function showLogin()
     {
         return view('login')
             ->with('title_prefix', 'Login');

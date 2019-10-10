@@ -14,17 +14,46 @@ class Post extends Model
     public $table = 'posts';
 
     /**
+     * The model's default values for attributes.
+     *
+     * @var array
+     */
+    protected $attributes = [
+        'subject' => '',
+        'body' => '',
+        'published' => false,
+    ];
+
+    /**
      * Attributes to cast to native types.
      *
      * @var array
      */
     protected $casts = [
-        'message' => 'string',
+        'subject' => 'string',
+        'body' => 'string',
+        'published' => 'boolean',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
 
-    public function getIdentifier()
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'subject',
+        'body',
+        'published',
+    ];
+
+    /**
+     * Get slug of this post.
+     *
+     * @return \type
+     */
+    public function slug()
     {
         return slugify($this->id . ' ' . $this->subject);
     }

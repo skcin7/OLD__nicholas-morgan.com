@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', 'HomepageController@showWelcomePage');
-Route::get('login', 'AuthController@showLoginPage');
+Route::get('/', 'WelcomeController@showWelcome');
+Route::get('login', 'AuthController@showLogin');
 Route::post('login', 'AuthController@login');
-Route::get('posts', 'PostsController@showAllPosts');
-Route::get('posts/{identifier}', 'PostsController@showPost');
+Route::get('posts', 'PostsController@showPosts');
+Route::get('posts/{postID}', 'PostsController@showPost');
 Route::get('logout', 'AuthController@logout');
 Route::get('contra', 'ContraController@play');
 Route::get('skills', 'SkillsController@showSkills');

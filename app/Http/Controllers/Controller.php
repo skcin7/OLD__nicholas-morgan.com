@@ -12,9 +12,20 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    protected function getPostByIdentifier($postIdentifier)
+    /**
+     * Get a post by ID.
+     *
+     * @param $postID
+     * @return mixed
+     */
+    protected function getPostByID($postID)
     {
-        $post = Post::find(explode('-', $postIdentifier)[0]);
+        // In case the ID is in the format of a slug, the first segment of the
+        // slug will be the ID. However, if it's not in the format of a
+        // slug, the first segment will still be the ID.
+        $postID = explode('-', $postID)[0];
+
+        $post = Post::find($postID);
         abort_if(! $post, 404, 'Post can not be found.');
         return $post;
     }

@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Post;
 
 class PostsController extends Controller
 {
     /**
-     * Show Posts page.
+     * Show posts page.
+     *
+     * @param Request $request
      * @return array|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function showPosts()
+    public function showPosts(Request $request)
     {
         return view('admin.posts')
             ->with('title_prefix', 'Posts');
@@ -19,52 +22,60 @@ class PostsController extends Controller
 
     /**
      * Show a post.
-     * @param null $identifier
+     *
+     * @param Request $request
+     * @param null $postID
      * @return array|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function showPost($identifier = null)
+    public function showPost(Request $request, $postID = null)
     {
-        if(isset($identifier)) {
-            $post = $this->getPostByIdentifier($identifier);
+        if(! is_null($postID)) {
+            $post = $this->getPostByID($postID);
         }
         else {
             $post = new Post();
         }
 
         return view('admin.post')
-            ->with('title_prefix', 'Post')
+            ->with('title_prefix', $post->exists ? 'Edit Post' : 'Add Post')
             ->with('post', $post);
     }
 
     /**
-     * Process a post.
-     * @param null $identifier
+     * Save a post.
+     *
+     * @param Request $request
+     * @param null $postID
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function processPost($identifier = null)
+    public function processPost(Request $request, $postID = null)
     {
-        $this->validate(request(), [
+        $request->validate([
             'subject' => 'required|string',
             'body' => 'required|string',
             'published' => 'nullable',
         ]);
 
-        if($identifier) {
-            $post = $this->getPostByIdentifier($identifier);
+        if(! is_null($postID)) {
+            $post = $this->getPostByID($postID);
 
-            if(request('delete')) {
+            if($request->input('delete_post')) {
                 $post->delete();
-                return $this->generateRedirectResponse('deleted', $post);
+
+                return redirect('admin/posts')
+                    ->with('flash_message', [
+                        'message' => 'Post has been deleted!',
+                    ]);
             }
         }
         else {
             $post = new Post();
         }
 
-        $post->subject = request('subject');
-        $post->body = request('body');
-        $post->published = (bool) request('published');
+        $post->subject = $request->input('subject');
+        $post->body = $request->input('body');
+        $post->published = $request->input('published');
         $post->save();
 
         if(! $post->wasRecentlyCreated) {

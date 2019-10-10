@@ -29,7 +29,7 @@
 
             <div class="form-group row">
                 <div class="col-md-12">
-                    <button class="btn btn-primary" type="submit">Save Global Settings</button>
+                    <button class="btn btn-primary" type="submit">Save Settings</button>
                 </div>
             </div>
         </form>

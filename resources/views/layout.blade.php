@@ -34,8 +34,15 @@
             @if(isset($settings->show_posts) && $settings->show_posts)
                 <a class="menu-item" href="{{ url('posts') }}">Posts</a>
             @endif
-            <a class="menu-item d-none" href="{{ url('skills') }}">Skills</a>
-            <a class="menu-item" href="{{ url('projects') }}">Projects</a>
+
+            @if(Setting::get('show_projects'))
+                <a class="menu-item" href="{{ url('projects') }}">Projects</a>
+            @endif
+
+            @if(Setting::get('show_skills'))
+                <a class="menu-item" href="{{ url('skills') }}">Skills</a>
+            @endif
+
             @if(Auth::check())
                 <a class="menu-item ml-auto" href="{{ url('admin') }}">Admin</a>
                 <a class="menu-item" href="{{ url('logout') }}">Logout</a>

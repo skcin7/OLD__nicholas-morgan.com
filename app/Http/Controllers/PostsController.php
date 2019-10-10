@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Post;
 use DB;
 
 class PostsController extends Controller
 {
     /**
-     * Show the home page of the application.
+     * Show the posts page.
      *
-     * @return type
+     * @param Request $request
+     * @return array|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function showAllPosts()
+    public function showPosts(Request $request)
     {
         $posts = Post::where('published', true)->orderBy('created_at', 'desc')->get()->groupBy(function($item) {
             return $item->created_at->format('Y');
@@ -23,9 +25,16 @@ class PostsController extends Controller
             ->with('posts', $posts);
     }
 
-    public function showPost($identifier)
+    /**
+     * Show a post.
+     *
+     * @param Request $request
+     * @param $postID
+     * @return array|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showPost(Request $request, $postID)
     {
-        $post = $this->getPostByIdentifier($identifier);
+        $post = $this->getPostByID($postID);
 
         return view('post')
             ->with('title_prefix', $post->subject)

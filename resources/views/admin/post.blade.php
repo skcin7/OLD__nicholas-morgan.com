@@ -45,7 +45,7 @@
                 <div class="col-md-12">
                     <button class="btn btn-primary" type="submit">{{ $post->exists ? 'Save' : 'Add' }} Post</button>
                     @if($post->exists)
-                        <button class="btn btn-danger" name="delete" type="submit" value="1" onclick="if(! confirm('Really delete this post?')) { return false; }">Delete</button>
+                        <button class="btn btn-danger" name="delete_post" type="submit" value="1" onclick="if(! confirm('Really delete post?')) { return false; }">Delete</button>
                     @endif
                 </div>
             </div>
