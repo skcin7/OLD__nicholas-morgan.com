@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\ValidationRules\MyJsonValidation;
 use Setting;
+use Storage;
 
 class SettingsController extends Controller
 {
@@ -18,14 +19,23 @@ class SettingsController extends Controller
      */
     public function saveSettings(Request $request)
     {
-        $this->validate(request(), [
-            'settings' => ['required', 'string', new MyJsonValidation()],
+        $request->validate([
+            'settings' => [
+                'required',
+                'string',
+                (new MyJsonValidation()),
+            ]
         ]);
 
-        $settings = json_decode(request('settings'));
-        Setting::forget('global');
-        Setting::set('global', json_encode($settings, JSON_NUMERIC_CHECK));
-        Setting::save();
+        $json_formatted = json_encode(json_decode($request->get('settings')), JSON_PRETTY_PRINT);
+        Storage::put('settings.json', $json_formatted);
+
+
+
+//        $settings = json_decode(request('settings'));
+//        Setting::forget('global');
+//        Setting::set('global', json_encode($settings, JSON_NUMERIC_CHECK));
+//        Setting::save();
 
         return redirect('admin')
             ->with('flash_message', [

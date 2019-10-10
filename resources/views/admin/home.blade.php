@@ -22,7 +22,7 @@
             <div class="form-group row">
                 <div class="col-md-12">
                     <div class="input-group">
-                        <textarea class="form-control autosize" name="settings" placeholder="Global Settings (JSON formatted)" rows="4">{{ Setting::get('global', '') }}</textarea>
+                        <textarea class="form-control autosize" name="settings" placeholder="Global Settings (JSON formatted)" rows="4">{{ old('settings') ? old('settings') : Storage::get('settings.json') }}</textarea>
                     </div>
                 </div>
             </div>
