@@ -9,7 +9,7 @@
         @include('_errors')
 
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ url('admin') }}"><i class="icon-home"></i> Admin</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('admin') }}">Admin</a></li>
             <li class="breadcrumb-item"><a href="{{ url('admin/posts') }}">Posts</a></li>
             <li class="breadcrumb-item">{!! $post->exists ? '[<code>' . $post->id . '</code>] ' . $post->title : 'Add Post' !!}</li>
         </ol>
