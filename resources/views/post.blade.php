@@ -13,7 +13,7 @@
             <li class="breadcrumb-item">{{ $post->subject }}</li>
         </ol>
 
-        <h1>{{ $post->subject }}</h1>
+        <h1 class="text-center">{{ $post->subject }}</h1>
 
         <div class="body">
             {!! Markdown::convertToHtml( $post->body ) !!}
