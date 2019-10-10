@@ -12,6 +12,8 @@ class AuthController extends Controller
 {
     use RedirectsUsers, ThrottlesLogins;
 
+    protected $redirectTo = '/admin';
+
     /**
      * Show the home page of the application.
      *
@@ -19,10 +21,6 @@ class AuthController extends Controller
      */
     public function showLoginPage()
     {
-        if(Auth::check()) {
-
-        }
-
         return view('login')
             ->with('title_prefix', 'Login');
     }
