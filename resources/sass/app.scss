@@ -110,6 +110,14 @@ header {
     }
 }
 
+main#page-content {
+    & > .container {
+        padding-bottom: 1rem !important;
+        padding-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
 footer {
     background-color: #101c3d;
     background-image: url('/images/dark-paths.png');

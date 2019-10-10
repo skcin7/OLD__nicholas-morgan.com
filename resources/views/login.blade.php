@@ -10,7 +10,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <form action="{{ url('login') }}" class="my-3" method="post">
+                <form action="{{ url('login') }}" method="post">
                     @csrf
 
                     <div class="form-group row">

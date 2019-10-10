@@ -34,7 +34,7 @@
             @if(isset($settings->show_posts) && $settings->show_posts)
                 <a class="menu-item" href="{{ url('posts') }}">Posts</a>
             @endif
-            <a class="menu-item" href="{{ url('skills') }}">Skills</a>
+            <a class="menu-item d-none" href="{{ url('skills') }}">Skills</a>
             <a class="menu-item" href="{{ url('projects') }}">Projects</a>
             @if(Auth::check())
                 <a class="menu-item ml-auto" href="{{ url('admin') }}">Admin</a>

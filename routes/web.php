@@ -18,7 +18,8 @@ Route::get('posts', 'PostsController@showAllPosts');
 Route::get('posts/{identifier}', 'PostsController@showPost');
 Route::get('logout', 'AuthController@logout');
 Route::get('contra', 'ContraController@play');
-Route::get('skills', 'AppController@showSkillsPage');
+Route::get('skills', 'SkillsController@showSkills');
+Route::get('projects', 'ProjectsController@showProjects');
 
 
 Route::get('home', 'HomeController@showHomePage');
