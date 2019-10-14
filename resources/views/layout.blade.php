@@ -44,9 +44,12 @@
                 <a class="menu-item" href="{{ url('skills') }}">Skills</a>
             @endif
 
+            @if(admin())
+                <a class="menu-item" href="{{ url('admin') }}">Admin</a>
+            @endif
+
             @if(Auth::check())
-                <a class="menu-item ml-auto" href="{{ url('admin') }}">Admin</a>
-                <a class="menu-item" href="{{ url('logout') }}">Logout</a>
+                <a class="menu-item ml-auto" href="{{ url('logout') }}">Logout</a>
             @else
                 <a class="menu-item ml-auto" href="{{ url('login') }}">Login</a>
             @endif
