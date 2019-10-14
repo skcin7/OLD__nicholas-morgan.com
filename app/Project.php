@@ -101,6 +101,17 @@ class Project extends Model
         $this->attributes['notes'] = (string) $value;
     }
 
+    /**
+     * Set the project's published.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setPublishedAttribute($value)
+    {
+        $this->attributes['published'] = (bool) $value;
+    }
+
 
 
 
