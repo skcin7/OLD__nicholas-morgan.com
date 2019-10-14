@@ -104,13 +104,13 @@
       <path value="$PROJECT_DIR$/vendor/backup-manager/backup-manager" />
       <path value="$PROJECT_DIR$/vendor/srmklive/flysystem-dropbox-v2" />
       <path value="$PROJECT_DIR$/vendor/skcin7/backup-manager" />
-      <path value="$PROJECT_DIR$/vendor/skcin7/database-manager" />
       <path value="$PROJECT_DIR$/vendor/skcin7/laravel-settings" />
       <path value="$PROJECT_DIR$/vendor/xethron/migrations-generator" />
       <path value="$PROJECT_DIR$/vendor/xethron/laravel-4-generators" />
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/backup-manager/laravel" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

@@ -47,12 +47,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
         Route::get('create', 'Admin\ProjectsController@show');
         Route::get('{projectID}', 'Admin\ProjectsController@show');
         Route::post('{projectID?}', 'Admin\ProjectsController@save');
+    });
 
-
-//        Route::get('add', 'Admin\ProjectsController@showPost');
-//        Route::post('add', 'Admin\ProjectsController@processPost');
-//        Route::get('{identifier}', 'Admin\ProjectsController@showPost');
-//        Route::post('{identifier}', 'Admin\ProjectsController@processPost');
+    Route::group(['prefix' => 'database_backups'], function() {
+        Route::get('/', 'Admin\DatabaseBackupsController@index');
     });
 
 

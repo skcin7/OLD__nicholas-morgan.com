@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/anlutro/l4-settings" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/backup-manager/backup-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/backup-manager/laravel" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/beyondcode/laravel-dump-server" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
@@ -80,7 +81,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/resource-operations" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/version" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/skcin7/backup-manager" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/skcin7/database-manager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/skcin7/laravel-settings" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/srmklive/flysystem-dropbox-v2" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
