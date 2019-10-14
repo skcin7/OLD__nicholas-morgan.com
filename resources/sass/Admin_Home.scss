@@ -1,29 +1,21 @@
 main#page-content[name=Admin_Home] {
 
-    #settings {
-        textarea {
-            &::placeholder {
-                color: #888;
-                font-family: $font-family-sans-serif;
-                font-size: 16px;
-            }
-
-            color: initial;
-            font-family: $font-family-monospace;
-            font-size: 14px;
-            line-height: 18px;
-            outline: none;
-            padding: 10px;
-            tab-size: 4;
-            -webkit-appearance: none;
-            -webkit-border-radius: 0px;
-
-            //-webkit-appearance: none;
-            //
-            //&:focus {
-            //    outline-color: transparent;
-            //    outline-style: none;
-            //}
+    textarea[name=settings] {
+        &::placeholder {
+            color: #888;
+            font-family: $font-family-sans-serif;
+            font-size: 16px;
         }
+
+        color: initial;
+        font-family: $font-family-monospace;
+        font-size: 14px;
+        line-height: 18px;
+        outline: none;
+        padding: 10px;
+        tab-size: 4;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
     }
+
 }
