@@ -16,10 +16,10 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('url');
-            $table->string('dates_completed');
-            $table->string('built_with');
-            $table->string('notes');
+            $table->string('url')->default('');
+            $table->string('dates_completed')->default('');
+            $table->text('built_with', 65535);
+            $table->text('notes', 65535);
             $table->boolean('published')->default(0);
             $table->timestamps();
         });
