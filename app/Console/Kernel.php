@@ -27,7 +27,17 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
 
-        $schedule->command('php artisan db:backup --database=mysql --destination=dropbox --destinationPath=nicholas-morgan --timestamp="Y-m-d-H-i-s" --compression=gzip')->daily();
+        $environment = config('app.env');
+        $schedule->command(
+            "db:backup --database=mysql --destination=dropbox --destinationPath=nicholas-morgan/" . $environment . "/ --timestamp='Y-m-d-H-i-s' --compression=gzip"
+         )->daily();
+
+//        $schedule->command('db:backup --database=mysql --destination=dropbox --destinationPath=nicholas-morgan/ --timestamp="Y-m-d-H-i-s" --compression=gzip')->daily();
+
+        // List:
+        // php artisan db:list --source=dropbox --path=nicholas-morgan
+
+        // Restore:
     }
 
     /**
