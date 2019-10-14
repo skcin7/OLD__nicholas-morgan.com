@@ -51,7 +51,7 @@ class AdminController extends Controller
 
         return redirect('admin/misc')
             ->with('flash_message', [
-                'message' => 'Misc info saved!'
+                'message' => 'Misc saved!'
             ]);
     }
 
