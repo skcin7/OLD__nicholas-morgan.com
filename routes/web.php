@@ -49,10 +49,6 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
         Route::post('{projectID?}', 'Admin\ProjectsController@save');
     });
 
-    Route::group(['prefix' => 'database_backups'], function() {
-        Route::get('/', 'Admin\DatabaseBackupsController@index');
-    });
-
 
 });
 

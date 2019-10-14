@@ -22,9 +22,6 @@
             <li>
                 <a href="{{ url('admin/projects') }}">Projects</a>
             </li>
-            <li>
-                <a href="{{ url('admin/database_backups') }}">Database Backups</a>
-            </li>
         </ul>
 
         <h3>Settings:</h3>
