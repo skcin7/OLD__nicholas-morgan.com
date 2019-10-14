@@ -19,7 +19,7 @@
                     <tr>
                         <th>Project</th>
                         <th>Dates Completed</th>
-                        <th>Built With</th>
+{{--                        <th>Built With</th>--}}
                         <th class="text-right">Notes</th>
                     </tr>
                     </thead>
@@ -36,9 +36,9 @@
                             <td>
                                 {{ $project->dates_completed }}
                             </td>
-                            <td>
-                                {!! Markdown::convertToHtml($project->built_with) !!}
-                            </td>
+{{--                            <td>--}}
+{{--                                {!! Markdown::convertToHtml($project->built_with) !!}--}}
+{{--                            </td>--}}
                             <td class="text-right">
                                 {!! Markdown::convertToHtml($project->notes) !!}
                             </td>
