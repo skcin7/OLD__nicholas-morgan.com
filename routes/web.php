@@ -48,8 +48,6 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
         Route::get('{projectID}', 'Admin\ProjectsController@show');
         Route::post('{projectID?}', 'Admin\ProjectsController@save');
     });
-
-
 });
 
 Route::get('test', function() { dd(\Config::all()); });
