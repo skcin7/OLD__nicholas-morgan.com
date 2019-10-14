@@ -24,7 +24,7 @@
             </li>
         </ul>
 
-        <h3>Global Settings:</h3>
+        <h3>Settings:</h3>
 
         <form action="{{ url('admin/settings') }}" method="post">
             @csrf

@@ -12,7 +12,7 @@
 
         <p>{!! $ex->getMessage() ? $ex->getMessage() : 'The page you specified can not be found!' !!}</p>
 
-        <p><a href="{{ url('/') }}">« Homepage</a></p>
+        <p><a href="{{ url()->previous() }}">« Homepage</a></p>
 
     </div>
 
