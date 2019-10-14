@@ -112,6 +112,16 @@ class Project extends Model
         $this->attributes['published'] = (bool) $value;
     }
 
+    /**
+     * Get the slug of the project.
+     *
+     * @return \type
+     */
+    public function slug()
+    {
+        return slugify($this->id . '-' . $this->name);
+    }
+
 
 
 

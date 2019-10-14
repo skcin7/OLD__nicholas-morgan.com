@@ -44,7 +44,7 @@
                                 {!! Markdown::convertToHtml($project->notes) !!}
                             </td>
                             <td class="text-right">
-                                <a class="btn btn-primary" href="{{ url('projects/' . $project->id) }}">More Details</a>
+                                <a class="btn btn-primary" href="{{ url('projects/' . $project->slug()) }}">More Details</a>
                             </td>
                         </tr>
                     @endforeach
