@@ -8,8 +8,6 @@
 
         @include('_errors')
 
-        @include('_page_not_in_menu_warning', ['page' => 'projects'])
-
         <h1 class="mb-3">Projects</h1>
 
         @if($projects->count())
