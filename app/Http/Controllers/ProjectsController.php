@@ -16,7 +16,7 @@ class ProjectsController extends Controller
      */
     public function showProjects(Request $request)
     {
-        $projectsQuery = Project::from('projects');
+        $projectsQuery = Project::from('projects')->where('published', true);
 
         return view('projects')
             ->with('title_prefix', 'Projects')
