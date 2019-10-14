@@ -32,15 +32,15 @@
         <div id="menu">
             <a class="menu-item" href="{{ url('/') }}">Home</a>
 
-            @if(Setting::get('show_posts'))
+            @if(Setting::get('show_posts') || admin())
                 <a class="menu-item" href="{{ url('posts') }}">Posts</a>
             @endif
 
-            @if(Setting::get('show_projects'))
+            @if(Setting::get('show_projects') || admin())
                 <a class="menu-item" href="{{ url('projects') }}">Projects</a>
             @endif
 
-            @if(Setting::get('show_skills'))
+            @if(Setting::get('show_skills') || admin())
                 <a class="menu-item" href="{{ url('skills') }}">Skills</a>
             @endif
 
