@@ -57,6 +57,50 @@ class Project extends Model
         'published',
     ];
 
+    /**
+     * Set the project's URL.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setUrlAttribute($value)
+    {
+        $this->attributes['url'] = (string) $value;
+    }
+
+    /**
+     * Set the project's dates completed.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setDatesCompletedAttribute($value)
+    {
+        $this->attributes['dates_completed'] = (string) $value;
+    }
+
+    /**
+     * Set the project's built with.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setBuiltWithAttribute($value)
+    {
+        $this->attributes['built_with'] = (string) $value;
+    }
+
+    /**
+     * Set the project's notes.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setNotesAttribute($value)
+    {
+        $this->attributes['notes'] = (string) $value;
+    }
+
 
 
 
