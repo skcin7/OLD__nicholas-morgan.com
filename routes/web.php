@@ -44,8 +44,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
 
     Route::group(['prefix' => 'projects'], function() {
         Route::get('/', 'Admin\ProjectsController@index');
-//        Route::get('create', 'Admin\ProjectsController@create');
-        Route::get('{projectID?}', 'Admin\ProjectsController@show');
+        Route::get('create', 'Admin\ProjectsController@show');
+        Route::get('{projectID}', 'Admin\ProjectsController@show');
         Route::post('{projectID?}', 'Admin\ProjectsController@save');
 
 

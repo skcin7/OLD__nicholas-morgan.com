@@ -44,7 +44,7 @@
             <p>No projects.</p>
         @endif
 
-        <a class="btn btn-primary" href="{{ url('admin/projects/create') }}">Create Default Project</a>
+        <a class="btn btn-primary" href="{{ url('admin/projects/create') }}">Create Project</a>
 
     </div>
 
