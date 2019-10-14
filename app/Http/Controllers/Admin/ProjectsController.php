@@ -76,7 +76,7 @@ class ProjectsController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function processPost(Request $request, $projectID = null)
+    public function save(Request $request, $projectID = null)
     {
         $request->validate([
             'name' => 'required|string',
