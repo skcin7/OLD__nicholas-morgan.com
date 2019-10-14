@@ -41,6 +41,21 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
         Route::get('{identifier}', 'Admin\PostsController@showPost');
         Route::post('{identifier}', 'Admin\PostsController@processPost');
     });
+
+    Route::group(['prefix' => 'projects'], function() {
+        Route::get('/', 'Admin\ProjectsController@index');
+//        Route::get('create', 'Admin\ProjectsController@create');
+        Route::get('{projectID?}', 'Admin\ProjectsController@show');
+        Route::post('{projectID?}', 'Admin\ProjectsController@save');
+
+
+//        Route::get('add', 'Admin\ProjectsController@showPost');
+//        Route::post('add', 'Admin\ProjectsController@processPost');
+//        Route::get('{identifier}', 'Admin\ProjectsController@showPost');
+//        Route::post('{identifier}', 'Admin\ProjectsController@processPost');
+    });
+
+
 });
 
 Route::get('test', function() { dd(\Config::all()); });

@@ -12,34 +12,44 @@
 
         <h1 class="mb-3">Projects</h1>
 
-        <div class="table-responsive">
-            <table class="table table-hover table-border">
-                <thead class="thead-dark">
-                <tr>
-                    <th>Project</th>
-                    <th>Dates Completed</th>
-                    <th>Built With</th>
-                    <th class="text-right">Notes</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>
-                        <a href="https://vgdb.io" target="_blank">VGDB: The Video Game Database</a>
-                    </td>
-                    <td>
-
-                    </td>
-                    <td>
-
-                    </td>
-                    <td class="text-right">
-
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+        @if($projects->count())
+            <div class="table-responsive">
+                <table class="table table-hover table-border">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Project</th>
+                        <th>Dates Completed</th>
+                        <th>Built With</th>
+                        <th class="text-right">Notes</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($projects as $project)
+                        <tr>
+                            <td>
+                                @if(strlen($project->url))
+                                    <a href="{{ $project->url }}" target="_blank">{{ $project->name }}</a>
+                                @else
+                                    {{ $project->name }}
+                                @endif
+                            </td>
+                            <td>
+                                {{ $project->dates_completed }}
+                            </td>
+                            <td>
+                                {!! Markdown::convertToHtml($project->built_with) !!}
+                            </td>
+                            <td class="text-right">
+                                {!! Markdown::convertToHtml($project->notes) !!}
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        @else
+            <p>No projects are listed.</p>
+        @endif
 
     </div>
 

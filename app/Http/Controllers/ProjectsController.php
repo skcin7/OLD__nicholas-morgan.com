@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+use App\Project;
 
 class ProjectsController extends Controller
 {
@@ -14,8 +16,11 @@ class ProjectsController extends Controller
      */
     public function showProjects(Request $request)
     {
+        $projectsQuery = Project::from('projects');
+
         return view('projects')
-            ->with('title_prefix', 'Projects');
+            ->with('title_prefix', 'Projects')
+            ->with('projects', $projectsQuery->paginate($this->perPage));
     }
 
 }
