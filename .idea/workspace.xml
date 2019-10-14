@@ -3,22 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="99ff3950-cab3-495f-9be7-cf6799d69d11" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/css/fontello-codes.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/css/fontello-codes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/css/fontello-embedded.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/css/fontello-embedded.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/css/fontello-ie7-codes.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/css/fontello-ie7-codes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/css/fontello-ie7.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/css/fontello-ie7.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/css/fontello.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/css/fontello.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/font/fontello.eot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/font/fontello.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/font/fontello.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/font/fontello.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/font/fontello.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/font/fontello.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/font/fontello.woff" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/font/fontello.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fontello/font/fontello.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fontello/font/fontello.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/fontello.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/fontello.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/fontello.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/fontello.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/fontello.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/fontello.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/fontello.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/fontello.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/fontello.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/fontello.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +218,7 @@
       <workItem from="1568524396258" duration="3204000" />
       <workItem from="1570732297625" duration="9751000" />
       <workItem from="1570887305019" duration="5000" />
-      <workItem from="1571067629487" duration="6136000" />
+      <workItem from="1571067629487" duration="6281000" />
     </task>
     <servers />
   </component>
