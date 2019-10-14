@@ -65,6 +65,7 @@
                 <i class="icon-copyright"></i> {{ date('Y') }} <a href="mailto:nick@nicholas-morgan.com">Nick Morgan</a>. All Rights Reserved. <a href="https://paste.nicholas-morgan.com">Paste</a>
                 <a href="http://instagram.com/skcin7" target="_blank"><i class="icon-instagram"></i></a>
                 <a href="http://github.com/skcin7" target="_blank"><i class="icon-github"></i></a>
+                @if(admin()) <a href="{{ url('admin') }}">Admin</a> @endif
             </div>
         </div>
     </footer>

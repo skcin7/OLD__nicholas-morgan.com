@@ -53,6 +53,12 @@
       "css": "instagram",
       "code": 62253,
       "src": "entypo"
+    },
+    {
+      "uid": "f4445feb55521283572ee88bc304f928",
+      "css": "floppy",
+      "code": 59398,
+      "src": "fontawesome"
     }
   ]
 }
