@@ -19,8 +19,8 @@
                     <tr>
                         <th>Project</th>
                         <th>Dates Completed</th>
-                        <th>Built With</th>
-                        <th class="text-right">Notes</th>
+                        <th>Notes</th>
+                        <th class="text-right">Built With</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -37,10 +37,10 @@
                                 {{ $project->dates_completed }}
                             </td>
                             <td>
-                                {!! Markdown::convertToHtml($project->built_with) !!}
+                                {!! Markdown::convertToHtml($project->notes) !!}
                             </td>
                             <td class="text-right">
-                                {!! Markdown::convertToHtml($project->notes) !!}
+                                {!! Markdown::convertToHtml($project->built_with) !!}
                             </td>
                         </tr>
                     @endforeach
