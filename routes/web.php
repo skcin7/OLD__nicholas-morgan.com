@@ -28,11 +28,14 @@ Route::get('home', 'HomeController@showHomePage');
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
     Route::get('/', 'Admin\AdminController@showAdminHome');
     Route::post('settings', 'Admin\SettingsController@saveSettings');
-    Route::get('posts', 'Admin\PostsController@showPosts');
-    Route::get('posts/add', 'Admin\PostsController@showPost');
-    Route::post('posts/add', 'Admin\PostsController@processPost');
-    Route::get('posts/{identifier}', 'Admin\PostsController@showPost');
-    Route::post('posts/{identifier}', 'Admin\PostsController@processPost');
+
+    Route::group(['prefix' => 'posts'], function() {
+        Route::get('/', 'Admin\PostsController@showPosts');
+        Route::get('add', 'Admin\PostsController@showPost');
+        Route::post('add', 'Admin\PostsController@processPost');
+        Route::get('{identifier}', 'Admin\PostsController@showPost');
+        Route::post('{identifier}', 'Admin\PostsController@processPost');
+    });
 });
 
 Route::get('test', function() { dd(\Config::all()); });

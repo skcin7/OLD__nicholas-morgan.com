@@ -16,7 +16,12 @@
             <li>
                 <a href="{{ url('admin/posts') }}">Posts</a>
             </li>
+            <li>
+                <a href="{{ url('admin/projects') }}">Projects</a>
+            </li>
         </ul>
+
+        <h3>Settings:</h3>
 
         <form action="{{ url('admin/settings') }}" id="settings" method="post">
             @csrf

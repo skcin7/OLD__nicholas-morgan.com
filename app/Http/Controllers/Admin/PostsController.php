@@ -20,7 +20,7 @@ class PostsController extends Controller
 
         return view('admin.posts')
             ->with('title_prefix', 'Posts')
-            ->with('posts', $postsQuery->paginate($this->perPage));
+            ->with('posts', $postsQuery->orderBy('created_at', 'desc')->paginate($this->perPage));
     }
 
     /**
