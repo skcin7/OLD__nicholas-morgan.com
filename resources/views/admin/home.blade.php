@@ -14,6 +14,9 @@
 
         <ul class="list-unstyled mb-5">
             <li>
+                <a href="{{ url('admin/misc') }}">Misc</a>
+            </li>
+            <li>
                 <a href="{{ url('admin/posts') }}">Posts</a>
             </li>
             <li>
@@ -23,7 +26,7 @@
 
         <h3>Global Settings:</h3>
 
-        <form action="{{ url('admin/settings') }}" id="settings" method="post">
+        <form action="{{ url('admin/settings') }}" method="post">
             @csrf
 
             <div class="form-group row">

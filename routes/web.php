@@ -29,6 +29,11 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
     Route::get('/', 'Admin\AdminController@showAdminHome');
     Route::post('settings', 'Admin\SettingsController@saveSettings');
 
+    Route::group(['prefix' => 'misc'], function() {
+        Route::get('/', 'Admin\AdminController@showMisc');
+        Route::post('/', 'Admin\AdminController@saveMisc');
+    });
+
     Route::group(['prefix' => 'posts'], function() {
         Route::get('/', 'Admin\PostsController@showPosts');
         Route::get('add', 'Admin\PostsController@showPost');
