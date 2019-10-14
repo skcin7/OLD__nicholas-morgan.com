@@ -10,7 +10,7 @@
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ url('admin') }}"><i class="icon-home"></i> Admin</a></li>
-            <li class="breadcrumb-item"><a href="{{ url('projects') }}">Projects</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('admin/projects') }}">Projects</a></li>
             <li class="breadcrumb-item">{{ $project->exists ? $project->name : 'Create Project' }}</li>
         </ol>
 
