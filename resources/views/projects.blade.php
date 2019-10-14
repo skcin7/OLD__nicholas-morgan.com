@@ -20,7 +20,7 @@
                         <th>Project</th>
                         <th>Dates Completed</th>
 {{--                        <th>Built With</th>--}}
-                        <th class="text-right">Notes</th>
+                        <th>Notes</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -39,7 +39,7 @@
 {{--                            <td>--}}
 {{--                                {!! Markdown::convertToHtml($project->built_with) !!}--}}
 {{--                            </td>--}}
-                            <td class="text-right">
+                            <td>
                                 {!! Markdown::convertToHtml($project->notes) !!}
                             </td>
                         </tr>
