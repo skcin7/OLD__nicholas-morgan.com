@@ -21,6 +21,7 @@
                         <th>Dates Completed</th>
 {{--                        <th>Built With</th>--}}
                         <th>Notes</th>
+                        <th class="text-right"></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -41,6 +42,9 @@
 {{--                            </td>--}}
                             <td>
                                 {!! Markdown::convertToHtml($project->notes) !!}
+                            </td>
+                            <td class="text-right">
+                                <a class="btn btn-primary" href="{{ url('projects/' . $project->id) }}">More Details</a>
                             </td>
                         </tr>
                     @endforeach
