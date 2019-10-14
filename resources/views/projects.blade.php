@@ -8,6 +8,8 @@
 
         @include('_errors')
 
+        @include('_page_not_in_menu_warning', ['page' => 'projects'])
+
         <h1>Projects</h1>
 
         <div class="table-responsive">

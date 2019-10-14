@@ -8,6 +8,8 @@
 
         @include('_errors')
 
+        @include('_page_not_in_menu_warning', ['page' => 'skills'])
+
         <div class="table-responsive">
             <table class="table table-hover table-border mt-3">
                 <thead class="thead-dark">

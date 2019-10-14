@@ -8,6 +8,8 @@
 
         @include('_errors')
 
+        @include('_page_not_in_menu_warning', ['page' => 'posts'])
+
         @if($posts->count())
 
             <ul id="posts">
