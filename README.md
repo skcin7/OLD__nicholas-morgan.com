@@ -4,7 +4,8 @@ The code for my personal awesome amazing website, which is hosted at [http://nic
 
 ## Built With
 
-* Language: [https://www.php.net/](PHP)
-* Framework: [https://laravel.com/](Laravel - The PHP Framework for Web Artisans)
-* Database: MySQL
-* JavaScript: jQuery
+* [PHP](https://www.php.net)
+* [Laravel - The PHP Framework for Web Artisans](https://laravel.com)
+* MySQL
+* jQuery
+* I'm sure a lot more
