@@ -1,6 +1,6 @@
 # nicholas-morgan
 
-The code for my personal awesome amazing website, which is hosted at [http://nicholas-morgan.com](http://nicholas-morgan.com).
+The code for my personal awesome amazing website! Hosted at [http://nicholas-morgan.com](http://nicholas-morgan.com).
 
 ## Built With
 

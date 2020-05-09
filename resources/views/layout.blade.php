@@ -51,7 +51,7 @@
             @if(Auth::check())
                 <a class="menu-item ml-auto" href="{{ url('logout') }}"><i class="icon-skull"></i> Logout</a>
             @else
-                <a class="menu-item ml-auto" href="{{ url('login') }}"><i class="icon-skull"></i> Login</a>
+                <a class="menu-item ml-auto" href="{{ url('login') }}"><i class="icon-skull"></i></a>
             @endif
         </div>
 

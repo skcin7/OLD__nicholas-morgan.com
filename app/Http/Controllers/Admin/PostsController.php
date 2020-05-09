@@ -75,9 +75,9 @@ class PostsController extends Controller
             $post = new Post();
         }
 
-        $post->title = $request->input('title');
-        $post->body = $request->input('body');
-        $post->published = $request->input('published');
+        $post->title = (string) $request->input('title');
+        $post->body = (string) $request->input('body');
+        $post->published = (bool) $request->input('published');
         $post->save();
 
         return redirect('admin/posts/' . $post->slug())
